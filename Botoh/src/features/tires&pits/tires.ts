@@ -68,9 +68,9 @@ export const TYRE_DURABILITY = (limit: number | null): TireDurability => {
   } else {
     // HAXBULA 25 MIN TIRES
     return {
-      [Tires.SOFT]: 900 * 0.7, // ≈ 630
-      [Tires.MEDIUM]: 1200 * 0.7, // ≈ 840
-      [Tires.HARD]: 1600 * 0.7, // ≈ 1120
+      [Tires.SOFT]: 472.7, // ≈ 630
+      [Tires.MEDIUM]: 866.8, // ≈ 840
+      [Tires.HARD]: 1575.6, // ≈ 1120
       [Tires.WET]: 1200 * 0.7, // ≈ 840
       [Tires.INTER]: 1200 * 0.7, // ≈ 840
       [Tires.FLAT]: Infinity,

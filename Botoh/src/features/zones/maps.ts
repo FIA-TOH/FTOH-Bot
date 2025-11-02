@@ -77,6 +77,7 @@ import { gameMode, GameMode } from "../changeGameState/changeGameModes";
 import { LAS_VEGAS } from "../../circuits/las_vegas/las_vegas";
 import { LAS_VEGASPUBLIC } from "../../circuits/las_vegas/las_vegasPublic";
 import { ZANDVOORT } from "../../circuits/zandvoort/zandvoort";
+import { GALVEZNANO } from "../../circuits/galvez/galvezNano";
 
 // import {DAYTONA} from "../circuits/daytona/daytona";
 // import {BARCELONA} from "../circuits/barcelona/barcelona";
@@ -127,6 +128,7 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       INDIANAPOLIS,
       PODIUM,
       WAITROOM,
+      GALVEZNANO,
     ]
   : [
       SUZUKAPUBLIC,
