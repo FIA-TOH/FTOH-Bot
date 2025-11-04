@@ -5,6 +5,7 @@ import { MESSAGES } from "../chat/messages";
 const DISCORD_LINKS = {
   ftoh: "https://discord.gg/qGKz5MmTxQ",
   haxbula: "https://discord.gg/UhrsXQYRsT",
+  fh: "https://discord.gg/u6e9FF3Z",
 };
 
 export function sendDiscordMessage(room: RoomObject) {

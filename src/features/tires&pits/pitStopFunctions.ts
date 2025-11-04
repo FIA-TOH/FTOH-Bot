@@ -13,7 +13,7 @@ export type PitResult = {
   perTyreTimes: number[];
 };
 const PIT_TABLE: PitTimeEntry[] = [
-  { time: 1.6, prob: 0.5 }, // ultra-rápido
+  /**{ time: 1.6, prob: 0.5 }, // ultra-rápido
   { time: 1.8, prob: 2 },
   { time: 2.0, prob: 5 },
   { time: 2.2, prob: 10 },
@@ -40,7 +40,19 @@ const PIT_TABLE: PitTimeEntry[] = [
   // { time: 9.0, prob: 3 }, // lento raro
   // { time: 10.0, prob: 1 }, // muito raro
   // { time: 12.0, prob: 0.8 }, // erros extremos
-  // { time: 15.0, prob: 0.4 }, // pit catastrófico
+  // { time: 15.0, prob: 0.4 }, // pit catastrófico*/
+
+  // FORMULA HAXBALL
+
+  { time: 6.5, prob: 3 }, // ultra-rápido
+  { time: 7.0, prob: 10 },
+  { time: 7.5, prob: 10 },
+  { time: 8.0, prob: 25 }, // Mas probable
+  { time: 8.5, prob: 20 },
+  { time: 9.0, prob: 15 },
+  { time: 9.5, prob: 10 },
+  { time: 10.0, prob: 5 },
+  { time: 10.5, prob: 2 }, // Catastrofe
 ];
 
 export function generatePitCountdown(): number {

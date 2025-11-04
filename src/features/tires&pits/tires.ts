@@ -67,15 +67,15 @@ export const TYRE_DURABILITY = (limit: number | null): TireDurability => {
     };
   } else {
     // HAXBULA 25 MIN TIRES
-    return {
-      [Tires.SOFT]: 900 * 0.7, // ≈ 630
-      [Tires.MEDIUM]: 1200 * 0.7, // ≈ 840
-      [Tires.HARD]: 1600 * 0.7, // ≈ 1120
-      [Tires.WET]: 1200 * 0.7, // ≈ 840
-      [Tires.INTER]: 1200 * 0.7, // ≈ 840
-      [Tires.FLAT]: Infinity,
-      [Tires.TRAIN]: Infinity,
-    };
+    //return {
+    //  [Tires.SOFT]: 900 * 0.7, // ≈ 630
+    //  [Tires.MEDIUM]: 1200 * 0.7, // ≈ 840
+    //  [Tires.HARD]: 1600 * 0.7, // ≈ 1120
+    //  [Tires.WET]: 1200 * 0.7, // ≈ 840
+    //  [Tires.INTER]: 1200 * 0.7, // ≈ 840
+    //  [Tires.FLAT]: Infinity,
+    //  [Tires.TRAIN]: Infinity,
+    // };
     //FTOH 30 MIN TIRES
     // return {
     //   [Tires.SOFT]: 900 * 0.8571, // ≈ 771.4
@@ -86,5 +86,15 @@ export const TYRE_DURABILITY = (limit: number | null): TireDurability => {
     //   [Tires.FLAT]: Infinity,
     //   [Tires.TRAIN]: Infinity,
     // };
+        // FORMULA HAXBALL 25 MIN TIRES
+    return {
+      [Tires.SOFT]: 1200 * 0.7, // ≈ 840 = 14
+      [Tires.MEDIUM]: 1400 * 0.7, // ≈ 980 = 16,3
+      [Tires.HARD]: 1800 * 0.7, // ≈ 1260 = 21
+      [Tires.WET]: 1200 * 0.7, // ≈ 840
+      [Tires.INTER]: 1200 * 0.7, // ≈ 840
+      [Tires.FLAT]: Infinity,
+      [Tires.TRAIN]: Infinity,
+    };
   }
 };
