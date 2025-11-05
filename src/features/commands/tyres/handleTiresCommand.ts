@@ -35,23 +35,25 @@ export function handleTiresCommand(
       return;
     }
 
-    //Code system for box
-    // if (LEAGUE_MODE && room.getScores().time > 0) {
-    //   const boxAlertReversed = playerList[byPlayer.id].boxAlert
-    //     .toString()
-    //     .split("")
-    //     .reverse()
-    //     .join("");
+    let tiresStr = args[0].toUpperCase();
 
-    //   if (
-    //     (args[1] !== boxAlertReversed || args.length !== 2) &&
-    //     !playerBuffList.some((player) => player.name === byPlayer.name)
-    //   ) {
-    //     sendErrorMessage(room, MESSAGES.CODE_WRONG(), byPlayer.id);
-    //     return;
-    //   }
-    // }
-    const tiresStr = args[0].toUpperCase();
+    // 🔁 Mapeamento de aliases / abreviações
+    const tireAliases: Record<string, Tires> = {
+      B: Tires.SOFT, // "b" = blandos (soft)
+      S: Tires.SOFT, // "s" = soft
+      M: Tires.MEDIUM,
+      D: Tires.HARD,
+      H: Tires.HARD,
+      I: Tires.INTER,
+      W: Tires.WET,
+      F: Tires.FLAT,
+      T: Tires.TRAIN,
+    };
+
+    if (tireAliases[tiresStr]) {
+      tiresStr = tireAliases[tiresStr];
+    }
+
     if (
       gameMode !== GameMode.TRAINING &&
       (tiresStr === "TRAIN" || tiresStr === "T")

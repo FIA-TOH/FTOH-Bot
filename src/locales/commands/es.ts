@@ -326,6 +326,7 @@ export default function es_commands(
     "!qtime": handleQTimeCommand,
     "!rmode": handleRModeCommand,
     "!bb": handleBBCommand,
+    "!ruedas": handleTiresCommand,
     "!neumaticos": handleTiresCommand,
     "!tyres": handleTiresCommand,
     "!tires": handleTiresCommand,
