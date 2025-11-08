@@ -78,6 +78,8 @@ import { LAS_VEGAS } from "../../circuits/las_vegas/las_vegas";
 import { LAS_VEGASPUBLIC } from "../../circuits/las_vegas/las_vegasPublic";
 import { ZANDVOORT } from "../../circuits/zandvoort/zandvoort";
 import { CHILE } from "../../circuits/chile/chile";
+import { JARAMA } from "../../circuits/jarama/jarama";
+import { BRANDS_HATCH } from "../../circuits/brands_hatch/brands_hatch";
 
 // import {DAYTONA} from "../circuits/daytona/daytona";
 // import {BARCELONA} from "../circuits/barcelona/barcelona";
@@ -127,6 +129,8 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       ZANDVOORT,
       INDIANAPOLIS,
       CHILE,
+      JARAMA,
+      BRANDS_HATCH,
       PODIUM,
       WAITROOM,
     ]
@@ -165,6 +169,8 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       LAS_VEGASPUBLIC,
       ZANDVOORT,
       CHILE,
+      JARAMA,
+      BRANDS_HATCH,
       WAITROOM,
       WAITROOMQUALY,
     ];
