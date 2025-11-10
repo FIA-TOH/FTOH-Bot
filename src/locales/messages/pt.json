@@ -147,5 +147,9 @@
   "TYPE_REJOIN": "⚠️ Você saiu durante a corrida. Digite !rejoin para voltar a correr.",
   "CANNOT_LEAVE_BOX": "⛔ Você não pode sair do box ainda!",
   "WHO_IS_AFK_SECTORS": "{{player}} está afk no setor {{sector}}",
-  "WHO_IS_AFK": "{{player}} está afk no setor"
+  "WHO_IS_AFK": "{{player}} está afk no setor",
+  "RADIO_MESSAGE_LEFT": "Por favor, forneça uma mensagem para enviar.",
+  "RADIO_BAD_USE": "Uso: !radio <playerId|playerName> <message>",
+  "MULTIPE_RADIO": "Vários jogadores coincidem. Use id ou seja mais específico.",
+  "RADIO_NOT_FOUND": "Jogador não encontrado."
 }

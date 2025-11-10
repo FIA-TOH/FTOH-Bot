@@ -145,5 +145,9 @@
   "TYPE_REJOIN": "⚠️ Yarış sırasında ayrıldınız. Yarışa geri dönmek için !rejoin yazın.",
   "CANNOT_LEAVE_BOX": "⛔ Henüz pit alanından çıkamazsınız!",
   "WHO_IS_AFK_SECTORS": "{{player}} {{sector}} sektöründe afk",
-  "WHO_IS_AFK": "{{player}} afk sektörde"
+  "WHO_IS_AFK": "{{player}} afk sektörde",
+  "RADIO_MESSAGE_LEFT": "Lütfen gönderilecek bir mesaj sağlayın.",
+  "RADIO_BAD_USE": "Kullanım: !radio <playerId|playerName> <message>",
+  "MULTIPE_RADIO": "Birden fazla oyuncu ile eşleşiyor. Kimlik kullanın veya daha spesifik olun.",
+  "RADIO_NOT_FOUND": "Oyuncu bulunamadı."
 }

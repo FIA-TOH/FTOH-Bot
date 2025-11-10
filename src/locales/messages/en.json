@@ -145,5 +145,9 @@
   "TYPE_REJOIN": "⚠️ You left during the race. Type !rejoin to return to racing.",
   "CANNOT_LEAVE_BOX": "⛔ You cannot leave the box yet!",
   "WHO_IS_AFK_SECTORS": "{{player}} is afk in sector {{sector}}",
-  "WHO_IS_AFK": "{{player}} is afk in sector"
+  "WHO_IS_AFK": "{{player}} is afk in sector",
+  "RADIO_MESSAGE_LEFT": "Please provide a message to send.",
+  "RADIO_BAD_USE": "Usage: !radio <playerId|playerName> <message>",
+  "MULTIPE_RADIO": "Multiple players match. Use id or be more specific.",
+  "RADIO_NOT_FOUND": "Player not found."
 }

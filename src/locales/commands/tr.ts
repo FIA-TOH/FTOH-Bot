@@ -310,6 +310,11 @@ export default function tr_commands(
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
+  ) => void,
+  handleRadioCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
   ) => void
 ): Commands {
   return {
@@ -377,5 +382,6 @@ export default function tr_commands(
     "!player_quantity": handlePlayerQuantity,
     "!set_max_players": handleLimitPlayerQuantity,
     "!set_rr": handleRRPositionCommand,
+    "!radio": handleRadioCommand,
   };
 }
