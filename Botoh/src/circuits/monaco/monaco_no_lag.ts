@@ -4,10 +4,13 @@ import { join } from "path";
 import { bestTimes } from "../bestTimes";
 import { Circuit, CircuitInfo, Direction } from "../Circuit";
 
-const monaco_raw = readFileSync(join(__dirname, "monaco.hbs"), "utf-8");
-const monaco_json = JSON.parse(monaco_raw);
+const monaco_no_lag_raw = readFileSync(
+  join(__dirname, "monaco_no_lag.hbs"),
+  "utf-8"
+);
+const monaco_no_lag_json = JSON.parse(monaco_no_lag_raw);
 
-const MONACO_INFO: CircuitInfo = {
+const MONACO_NO_LAG_INFO: CircuitInfo = {
   finishLine: {
     bounds: {
       minX: 70,
@@ -81,10 +84,14 @@ const MONACO_INFO: CircuitInfo = {
   ],
   checkpoints: [],
   lastPlace: {
-    x: monaco_json.redSpawnPoints[monaco_json.redSpawnPoints.length - 1][0],
-    y: monaco_json.redSpawnPoints[monaco_json.redSpawnPoints.length - 1][1],
+    x: monaco_no_lag_json.redSpawnPoints[
+      monaco_no_lag_json.redSpawnPoints.length - 1
+    ][0],
+    y: monaco_no_lag_json.redSpawnPoints[
+      monaco_no_lag_json.redSpawnPoints.length - 1
+    ][1],
   },
-  BestTime: bestTimes.monaco,
+  BestTime: bestTimes.monaco_no_lag,
   MainColor: [0xd6001d, 0xd6001d, 0xffffff],
   AvatarColor: 0xffffff,
   Angle: 60,
@@ -120,7 +127,7 @@ const MONACO_INFO: CircuitInfo = {
   ],
 };
 
-export const MONACO: Circuit = {
-  map: monaco_raw,
-  info: MONACO_INFO,
+export const MONACO_NO_LAG: Circuit = {
+  map: monaco_no_lag_raw,
+  info: MONACO_NO_LAG_INFO,
 };

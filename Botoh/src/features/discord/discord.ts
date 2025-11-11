@@ -163,7 +163,7 @@ export function sendDiscordResult(message: string) {
     } else {
       LOG_URL = LEAGUE_MODE ? LEAGUE_REPLAY_URL : PUBLIC_REPLAY_URL;
     }
-        if (envName === "fh") {
+    if (envName === "fh") {
       LOG_URL = LEAGUE_MODE ? LEAGUE_REPLAY_URL_FH : PUBLIC_REPLAY_URL;
     }
 

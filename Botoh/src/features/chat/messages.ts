@@ -1675,28 +1675,28 @@ export const MESSAGES = {
       player: player.toString(),
     }),
   }),
-    RADIO_MESSAGE_LEFT: (): LocalizedMessageFunction => ({
+  RADIO_MESSAGE_LEFT: (): LocalizedMessageFunction => ({
     en: en_messages.RADIO_MESSAGE_LEFT,
     es: es_messages.RADIO_MESSAGE_LEFT,
     fr: fr_messages.RADIO_MESSAGE_LEFT,
     tr: tr_messages.RADIO_MESSAGE_LEFT,
     pt: pt_messages.RADIO_MESSAGE_LEFT,
   }),
-    RADIO_BAD_USE: (): LocalizedMessageFunction => ({
+  RADIO_BAD_USE: (): LocalizedMessageFunction => ({
     en: en_messages.RADIO_BAD_USE,
     es: es_messages.RADIO_BAD_USE,
     fr: fr_messages.RADIO_BAD_USE,
     tr: tr_messages.RADIO_BAD_USE,
     pt: pt_messages.RADIO_BAD_USE,
   }),
-    MULTIPE_RADIO: (): LocalizedMessageFunction => ({
+  MULTIPE_RADIO: (): LocalizedMessageFunction => ({
     en: en_messages.MULTIPE_RADIO,
     es: es_messages.MULTIPE_RADIO,
     fr: fr_messages.MULTIPE_RADIO,
     tr: tr_messages.MULTIPE_RADIO,
     pt: pt_messages.MULTIPE_RADIO,
   }),
-    RADIO_NOT_FOUND: (): LocalizedMessageFunction => ({
+  RADIO_NOT_FOUND: (): LocalizedMessageFunction => ({
     en: en_messages.RADIO_NOT_FOUND,
     es: es_messages.RADIO_NOT_FOUND,
     fr: fr_messages.RADIO_NOT_FOUND,

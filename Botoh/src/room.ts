@@ -26,20 +26,19 @@ import { log } from "./features/discord/logger";
 
 const envName = process.env.LEAGUE_ENV || "ftoh";
 const roomName = LEAGUE_MODE
-  /**? envName === "haxbula"
+  ? /**? envName === "haxbula"
     ? haxbulaLeagueName
     : leagueName
   : envName === "haxbula"
     ? haxbulaPublicName
     : publicName
   */
-  ? envName === "fh"
+    envName === "fh"
     ? formulaHaxballLeagueName
     : leagueName
   : envName === "fh"
-    ? formulaHaxballPublicName
-    : publicName
-  
+  ? formulaHaxballPublicName
+  : publicName;
 
 function getGeo() {
   const geoEnv = process.env.HAXBALL_GEO;
