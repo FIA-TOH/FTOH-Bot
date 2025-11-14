@@ -151,5 +151,6 @@
   "RADIO_MESSAGE_LEFT": "Por favor, forneça uma mensagem para enviar.",
   "RADIO_BAD_USE": "Uso: !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Vários jogadores coincidem. Use id ou seja mais específico.",
-  "RADIO_NOT_FOUND": "Jogador não encontrado."
+  "RADIO_NOT_FOUND": "Jogador não encontrado.",
+  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Estamos vendo muito graining — Possível estouro de pneu a qualquer momento — box, box! 🛞⚠️"
 }

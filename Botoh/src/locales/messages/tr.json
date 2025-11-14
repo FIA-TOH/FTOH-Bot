@@ -149,5 +149,6 @@
   "RADIO_MESSAGE_LEFT": "Lütfen gönderilecek bir mesaj sağlayın.",
   "RADIO_BAD_USE": "Kullanım: !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Birden fazla oyuncu ile eşleşiyor. Kimlik kullanın veya daha spesifik olun.",
-  "RADIO_NOT_FOUND": "Oyuncu bulunamadı."
+  "RADIO_NOT_FOUND": "Oyuncu bulunamadı.",
+  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Lastikte ciddi tanelenme graining — Her an patlama riski var — box, box! 🛞⚠️"
 }

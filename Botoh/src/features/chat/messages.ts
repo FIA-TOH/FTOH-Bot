@@ -1703,4 +1703,11 @@ export const MESSAGES = {
     tr: tr_messages.RADIO_NOT_FOUND,
     pt: pt_messages.RADIO_NOT_FOUND,
   }),
+  TYRES_ABOUT_TO_BLOWN: (): LocalizedMessageFunction => ({
+    en: replaceTemplateString(en_messages.TYRES_ABOUT_TO_BLOWN, {}),
+    es: replaceTemplateString(es_messages.TYRES_ABOUT_TO_BLOWN, {}),
+    fr: replaceTemplateString(fr_messages.TYRES_ABOUT_TO_BLOWN, {}),
+    tr: replaceTemplateString(tr_messages.TYRES_ABOUT_TO_BLOWN, {}),
+    pt: replaceTemplateString(pt_messages.TYRES_ABOUT_TO_BLOWN, {}),
+  }),
 };

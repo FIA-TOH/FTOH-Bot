@@ -38,7 +38,6 @@ import { handleEnableQualyForPub } from "./gameMode/qualy/handleEnableQualyForPu
 import { handleEndRainCommand } from "./rain/handleEndRainCommand";
 import { handleRainCommand } from "./rain/handleRainCommand";
 import { handleRainItensity } from "./rain/handleRainIntensity";
-import { handleEnableTyresCommand } from "./tyres/handleEnableTyresCommand";
 import { handleTipsCommands } from "./chat/handleTipsCommands";
 import { handleExplainErsCommand } from "./ersAndFuel/handleExplainErsCommand";
 import { handleFlagCommand } from "./flagsAndVSC/handleFlagCommand";
@@ -50,7 +49,7 @@ import { handleRREnabledCommand } from "./adminThings/handleRREnabledCommand";
 import { handleTpCommand } from "./adminThings/handleTpCommand";
 import { handleGasCommand } from "./ersAndFuel/handleGasCommand";
 import { handleGhostCommand } from "./playerState/handleGhostCommand";
-import { handleSlipstreamCommand } from "./speed/handleSlipstreamCommand";
+import { handleToggleSystems } from "./adminThings/handleToggleSystems";
 import { handleChangePropierties } from "./adminThings/handleChangePropierties";
 import { handleRRCommand } from "./playerState/handleRRCommand";
 import { handleSeeTeams } from "./teams/handleSeeTeams";
@@ -185,7 +184,7 @@ export type CommandFunction = (
     args: string[],
     room: RoomObject
   ) => void,
-  handleSlipstreamCommand: (
+  handleToggleSystems: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
@@ -226,11 +225,6 @@ export type CommandFunction = (
     room: RoomObject
   ) => void,
   handleEnableQualyForPub: (
-    byPlayer: PlayerObject,
-    args: string[],
-    room: RoomObject
-  ) => void,
-  handleEnableTyresCommand: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
@@ -417,7 +411,7 @@ function importCommandsByLanguage(commandFunctions: {
         handleClearTimeCommand,
         handleMuteCommand,
         handleRainCommand,
-        handleSlipstreamCommand,
+        handleToggleSystems,
         handleGasCommand,
         handleGhostCommand,
         handleRREnabledCommand,
@@ -426,7 +420,7 @@ function importCommandsByLanguage(commandFunctions: {
         handleEndRainCommand,
         handleAfkCommand,
         handleEnableQualyForPub,
-        handleEnableTyresCommand,
+
         handleTipsCommands,
         handleExplainTyresCommand,
         handleExplainServerCommand,
@@ -491,7 +485,7 @@ function importCommands(...commandFunction: CommandFunction[]): Commands {
         handleClearTimeCommand,
         handleMuteCommand,
         handleRainCommand,
-        handleSlipstreamCommand,
+        handleToggleSystems,
         handleGasCommand,
         handleGhostCommand,
         handleRREnabledCommand,
@@ -500,7 +494,6 @@ function importCommands(...commandFunction: CommandFunction[]): Commands {
         handleEndRainCommand,
         handleAfkCommand,
         handleEnableQualyForPub,
-        handleEnableTyresCommand,
         handleTipsCommands,
         handleExplainTyresCommand,
         handleExplainServerCommand,
