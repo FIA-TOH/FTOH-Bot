@@ -81,6 +81,7 @@ import { CHILE } from "../../circuits/chile/chile";
 import { JARAMA } from "../../circuits/jarama/jarama";
 import { BRANDS_HATCH } from "../../circuits/brands_hatch/brands_hatch";
 import { BARCELONA } from "../../circuits/barcelona/barcelona";
+import { CANADA_NANO } from "../../circuits/canada_nano/canada_nano";
 
 // import {DAYTONA} from "../circuits/daytona/daytona";
 // import {BARCELONA} from "../circuits/barcelona/barcelona";
@@ -133,6 +134,7 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       JARAMA,
       BRANDS_HATCH,
       BARCELONA,
+      CANADA_NANO,
       INDIANAPOLIS,
       PODIUM,
       WAITROOM,

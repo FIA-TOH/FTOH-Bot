@@ -88,9 +88,9 @@ export const TYRE_DURABILITY = (limit: number | null): TireDurability => {
     // };
     // FORMULA HAXBALL 25 MIN TIRES
     return {
-      [Tires.SOFT]: 1200 * 0.7, // ≈ 840 = 14
-      [Tires.MEDIUM]: 1400 * 0.7, // ≈ 980 = 16,3
-      [Tires.HARD]: 1800 * 0.7, // ≈ 1260 = 21
+      [Tires.SOFT]: 1371 * 0.7, // ≈ 840 = 14
+      [Tires.MEDIUM]: 1714 * 0.7, // ≈ 980 = 16,3
+      [Tires.HARD]: 2571 * 0.7, // ≈ 1260 = 21
       [Tires.WET]: 1200 * 0.7, // ≈ 840
       [Tires.INTER]: 1200 * 0.7, // ≈ 840
       [Tires.FLAT]: Infinity,

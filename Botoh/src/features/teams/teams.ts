@@ -4,7 +4,7 @@ export interface LeagueTeam {
   color: number;
 }
 export enum TeamColors {
-  PENSHIRYU = 0xb45568,
+/*  PENSHIRYU = 0xb45568,
   ASTONMAIA = 0x059988,
   RUBYBISON = 0x4458a2,
   MCLARPER = 0xff8700,
@@ -23,11 +23,23 @@ export enum TeamColors {
   TOYOSSI = 0x858585,
   BMW = 0x0066b1,
   BRACCHIARI = 0xec1c24,
-  PHM = 0x5ef102,
+  PHM = 0x5ef102,*/
+  GORSCHE = 0xF0F0F0,
+  FERRARI = 0xec1c24,
+  HRT = 0xC6C987,
+  REDBULL = 0x1E41FF,
+  ALPINE = 0x2293D1,
+  RB = 0x8295FF,
+  PREMA = 0xFF4545,
+  WILLIAMS = 0x37BEDD,
+  HISPALIS = 0xFF5733,
+  MEISE = 0x8533FF,
+  BUGATTI = 0x010647,
+  PAGANI = 0xD1FFFF,
 }
 
 export const LeagueTeam: { [key: string]: LeagueTeam } = {
-  Penshiryu: {
+/*  Penshiryu: {
     name: "Penshiryu",
     tag: "PE",
     color: TeamColors.PENSHIRYU,
@@ -126,5 +138,65 @@ export const LeagueTeam: { [key: string]: LeagueTeam } = {
     name: "PHM FAX",
     tag: "PH",
     color: TeamColors.PHM,
+  },*/
+  Gorsche: {
+    name: "Gorsche",
+    tag: "GOR",
+    color: TeamColors.GORSCHE,
+  },
+  Ferrari: {
+    name: "Ferrari",
+    tag: "FER",
+    color: TeamColors.FERRARI,
+  },
+  HRT : {
+    name: "HRT",
+    tag: "HRT",
+    color: TeamColors.HRT,
+  },
+  RedBull: {
+    name: "Red Bull",
+    tag: "RBR",
+    color: TeamColors.REDBULL,
+  },
+  Alpine: {
+    name: "Alpine",
+    tag: "ALP",
+    color: TeamColors.ALPINE,
+  },
+  RB: {
+    name: "RB",
+    tag: "RB",
+    color: TeamColors.RB,
+  },
+  Prema: {
+    name: "Prema",
+    tag: "PRE",
+    color: TeamColors.PREMA,
+  },
+  Williams: {
+    name: "Williams",
+    tag: "WIL",
+    color: TeamColors.WILLIAMS,
+  },
+  Hispalis: {
+    name: "Hispalis",
+    tag: "HIS",
+    color: TeamColors.HISPALIS,
+  },
+  Meise: {
+    name: "Meise",
+    tag: "MEI",
+    color: TeamColors.MEISE,
+  },
+  Bugatti: {
+    name: "Bugatti",
+    tag: "BUG",
+    color: TeamColors.BUGATTI,
+  },
+  Pagani: {
+    name: "Pagani",
+    tag: "PAG",
+    color: TeamColors.PAGANI,
   },
 };
