@@ -58,7 +58,7 @@ const CHILE_INFO: CircuitInfo = {
         x: chile_json.redSpawnPoints[chile_json.redSpawnPoints.length - 1][0],
         y: chile_json.redSpawnPoints[chile_json.redSpawnPoints.length - 1][1],
     },
-    BestTime: bestTimes.yasMarina,
+    BestTime: bestTimes.chile,
     MainColor: [0x047a3d, 0xffffff, 0x047a3d],
     AvatarColor: 0xf30505,
     Angle: 90,

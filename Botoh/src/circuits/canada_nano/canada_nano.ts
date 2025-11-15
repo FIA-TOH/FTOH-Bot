@@ -84,7 +84,7 @@ const CANADA_NANO_INFO: CircuitInfo = {
     x: canada_nano_json.redSpawnPoints[canada_nano_json.redSpawnPoints.length - 1][0],
     y: canada_nano_json.redSpawnPoints[canada_nano_json.redSpawnPoints.length - 1][1],
   },
-  BestTime: bestTimes.canada,
+  BestTime: bestTimes.canada_nano,
   MainColor: [0xd6001d, 0xffffff, 0xd6001d],
   AvatarColor: 0x000001,
   Angle: 90,
