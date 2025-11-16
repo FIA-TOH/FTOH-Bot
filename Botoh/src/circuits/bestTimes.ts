@@ -42,6 +42,8 @@ const trackNameMapping: { [key: string]: string } = {
   brands_hatch: "Brands Hatch By Nanoseb",
   barcelona: "Circuit de Barcelona-Catalunya by Rodri",
   canada_nano: "Circuit Gilles Villeneuve By Nanoseb",
+  autodromo_nanoseb: "Autodromo Nanoseb By Nanoseb",
+  dubai: "Dubai Autodrome By Nanoseb",
 };
 
 export const bestTimes: { [key: string]: [number, string, string] } = {
@@ -92,7 +94,9 @@ export const bestTimes: { [key: string]: [number, string, string] } = {
     "Ximbastian Vettel",
     "Circuit de Barcelona-Catalunya by Rodri",
   ],
-  canada_nano: [999.99, "undefined", "Circuit Gilles Villeneuve By Nanoseb"],
+  canada_nano: [41.150, "Joninho", "Circuit Gilles Villeneuve By Nanoseb"],
+  autodromo_nanoseb: [999.99, "undefined", "Autodromo Nanoseb By Nanoseb"],
+  dubai: [999.99, "undefined", "Dubai Autodrome By Nanoseb"],
 };
 export const getAbbreviatedTrackName = (
   fullTrackName: string
