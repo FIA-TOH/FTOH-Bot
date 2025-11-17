@@ -44,6 +44,8 @@ const trackNameMapping: { [key: string]: string } = {
   canada_nano: "Circuit Gilles Villeneuve By Nanoseb",
   autodromo_nanoseb: "Autodromo Nanoseb By Nanoseb",
   dubai: "Dubai Autodrome By Nanoseb",
+  monaco_nano: "Monaco Circuit By Nanoseb",
+  grecia: "Autodromo Grecia By Nanoseb",
 };
 
 export const bestTimes: { [key: string]: [number, string, string] } = {
@@ -97,6 +99,8 @@ export const bestTimes: { [key: string]: [number, string, string] } = {
   canada_nano: [41.150, "Joninho", "Circuit Gilles Villeneuve By Nanoseb"],
   autodromo_nanoseb: [999.99, "undefined", "Autodromo Nanoseb By Nanoseb"],
   dubai: [999.99, "undefined", "Dubai Autodrome By Nanoseb"],
+  monaco_nano: [42.147, "Joninho", "Monaco Circuit By Nanoseb"],
+  grecia: [999.99, "undefined", "Autodromo Grecia By Nanoseb"],
 };
 export const getAbbreviatedTrackName = (
   fullTrackName: string
