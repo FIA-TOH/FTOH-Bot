@@ -1,10 +1,10 @@
-export interface LeagueTeam {
+export interface leagueScuderia {
   name: string;
   tag: string;
   color: number;
 }
-export enum TeamColors {
-/*  PENSHIRYU = 0xb45568,
+export enum ScuderiaColors {
+  /*  PENSHIRYU = 0xb45568,
   ASTONMAIA = 0x059988,
   RUBYBISON = 0x4458a2,
   MCLARPER = 0xff8700,
@@ -24,179 +24,179 @@ export enum TeamColors {
   BMW = 0x0066b1,
   BRACCHIARI = 0xec1c24,
   PHM = 0x5ef102,*/
-  GORSCHE = 0xF0F0F0,
+  GORSCHE = 0xf0f0f0,
   FERRARI = 0xec1c24,
-  HRT = 0xC6C987,
-  REDBULL = 0x1E41FF,
-  ALPINE = 0x2293D1,
-  RB = 0x8295FF,
-  PREMA = 0xFF4545,
-  WILLIAMS = 0x37BEDD,
-  HISPALIS = 0xFF5733,
-  MEISE = 0x8533FF,
+  HRT = 0xc6c987,
+  REDBULL = 0x1e41ff,
+  ALPINE = 0x2293d1,
+  RB = 0x8295ff,
+  PREMA = 0xff4545,
+  WILLIAMS = 0x37bedd,
+  HISPALIS = 0xff5733,
+  MEISE = 0x8533ff,
   BUGATTI = 0x010647,
-  PAGANI = 0xD1FFFF,
+  PAGANI = 0xd1ffff,
 }
 
-export const LeagueTeam: { [key: string]: LeagueTeam } = {
-/*  Penshiryu: {
+export const leagueScuderia: { [key: string]: leagueScuderia } = {
+  /*  Penshiryu: {
     name: "Penshiryu",
     tag: "PE",
-    color: TeamColors.PENSHIRYU,
+    color: ScuderiaColours.PENSHIRYU,
   },
   AstonMaia: {
     name: "Aston Maia",
     tag: "AM",
-    color: TeamColors.ASTONMAIA,
+    color: ScuderiaColours.ASTONMAIA,
   },
   RubyBison: {
     name: "Ruby Bison",
     tag: "RB",
-    color: TeamColors.RUBYBISON,
+    color: ScuderiaColours.RUBYBISON,
   },
   McLarper: {
     name: "McLarper",
     tag: "MC",
-    color: TeamColors.MCLARPER,
+    color: ScuderiaColours.MCLARPER,
   },
   Haax: {
     name: "Haax",
     tag: "HX",
-    color: TeamColors.HAAX,
+    color: ScuderiaColours.HAAX,
   },
   MotorForce: {
     name: "BMW MotorForce",
     tag: "MF",
-    color: TeamColors.MOTORFORCE,
+    color: ScuderiaColours.MOTORFORCE,
   },
   SART: {
     name: "SART",
     tag: "SA",
-    color: TeamColors.SART,
+    color: ScuderiaColours.SART,
   },
   Konardi: {
     name: "Konardi",
     tag: "KO",
-    color: TeamColors.KONARDI,
+    color: ScuderiaColours.KONARDI,
   },
   LenaultMoreo: {
     name: "Lenaut Moreo",
     tag: "LM",
-    color: TeamColors.LENAULTMOREO,
+    color: ScuderiaColours.LENAULTMOREO,
   },
   Questi: {
     name: "Questi",
     tag: "QE",
-    color: TeamColors.QUESTI,
+    color: ScuderiaColours.QUESTI,
   },
   Sixdent: {
     name: "Sixdent",
     tag: "SX",
-    color: TeamColors.SIXDENT,
+    color: ScuderiaColours.SIXDENT,
   },
   JeanBorghini: {
     name: "JeanBorghini",
     tag: "JB",
-    color: TeamColors.JEANBORGHINI,
+    color: ScuderiaColours.JEANBORGHINI,
   },
   Pejo: {
     name: "Pejo",
     tag: "PJ",
-    color: TeamColors.PEJO,
+    color: ScuderiaColours.PEJO,
   },
   Brawndesco: {
     name: "Brawndesco",
     tag: "BW",
-    color: TeamColors.BRAWNDESCO,
+    color: ScuderiaColours.BRAWNDESCO,
   },
   Interforce: {
     name: "BMW Interforce",
     tag: "IF",
-    color: TeamColors.INTERFORCE,
+    color: ScuderiaColours.INTERFORCE,
   },
   Alpino: {
     name: "Alpino",
     tag: "AP",
-    color: TeamColors.ALPINO,
+    color: ScuderiaColours.ALPINO,
   },
   Toyossi: {
     name: "BMW Toyossi",
     tag: "TY",
-    color: TeamColors.TOYOSSI,
+    color: ScuderiaColours.TOYOSSI,
   },
   BMW: {
     name: "Swiss BMW",
     tag: "BM",
-    color: TeamColors.BMW,
+    color: ScuderiaColours.BMW,
   },
   Bracchiari: {
     name: "Bracchiari",
     tag: "SB",
-    color: TeamColors.BRACCHIARI,
+    color: ScuderiaColours.BRACCHIARI,
   },
   PHM: {
     name: "PHM FAX",
     tag: "PH",
-    color: TeamColors.PHM,
+    color: ScuderiaColours.PHM,
   },*/
   Gorsche: {
     name: "Gorsche",
     tag: "GOR",
-    color: TeamColors.GORSCHE,
+    color: ScuderiaColours.GORSCHE,
   },
   Ferrari: {
     name: "Ferrari",
     tag: "FER",
-    color: TeamColors.FERRARI,
+    color: ScuderiaColours.FERRARI,
   },
-  HRT : {
+  HRT: {
     name: "HRT",
     tag: "HRT",
-    color: TeamColors.HRT,
+    color: ScuderiaColours.HRT,
   },
   RedBull: {
     name: "Red Bull",
     tag: "RBR",
-    color: TeamColors.REDBULL,
+    color: ScuderiaColours.REDBULL,
   },
   Alpine: {
     name: "Alpine",
     tag: "ALP",
-    color: TeamColors.ALPINE,
+    color: ScuderiaColours.ALPINE,
   },
   RB: {
     name: "RB",
     tag: "RB",
-    color: TeamColors.RB,
+    color: ScuderiaColours.RB,
   },
   Prema: {
     name: "Prema",
     tag: "PRE",
-    color: TeamColors.PREMA,
+    color: ScuderiaColours.PREMA,
   },
   Williams: {
     name: "Williams",
     tag: "WIL",
-    color: TeamColors.WILLIAMS,
+    color: ScuderiaColours.WILLIAMS,
   },
   Hispalis: {
     name: "Hispalis",
     tag: "HIS",
-    color: TeamColors.HISPALIS,
+    color: ScuderiaColours.HISPALIS,
   },
   Meise: {
     name: "Meise",
     tag: "MEI",
-    color: TeamColors.MEISE,
+    color: ScuderiaColours.MEISE,
   },
   Bugatti: {
     name: "Bugatti",
     tag: "BUG",
-    color: TeamColors.BUGATTI,
+    color: ScuderiaColours.BUGATTI,
   },
   Pagani: {
     name: "Pagani",
     tag: "PAG",
-    color: TeamColors.PAGANI,
+    color: ScuderiaColours.PAGANI,
   },
 };

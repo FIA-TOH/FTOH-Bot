@@ -123,8 +123,8 @@
   "CODE_WRONG": "Hatalı kod! Doğru kodu ters olarak girin.",
   "PRESENTATION_LAP": "Tanıtım turu! Yavaşça ilerleyin ve yeşil bayrak verilene kadar geçiş yapmayın.",
   "SECONDS_TO_FINISH": "Yarış {{segundos}} saniye içinde bitiyor",
-  "TEAM_DEFINED": "Takım başarıyla ayarlandı: {{name}} ({{tag}})",
-  "TEAM_ERROR": "Takım bulunamadı: {{value}}. Lütfen etiket veya adı kontrol edin.",
+  "SCUDERIA_DEFINED": "Takım başarıyla ayarlandı: {{name}} ({{tag}})",
+  "SCUDERIA_ERROR": "Takım bulunamadı: {{value}}. Lütfen etiket veya adı kontrol edin.",
   "QUALY_STARTING": "{{segundos}} saniye içinde sıralama başlayacak.",
   "RACE_STARTING": "{{segundos}} saniye içinde yarış başlayacak.",
   "CHAT_MUTED": "SESSİZLİK! Sohbet şimdi susturuldu!",
@@ -146,9 +146,10 @@
   "CANNOT_LEAVE_BOX": "⛔ Henüz pit alanından çıkamazsınız!",
   "WHO_IS_AFK_SECTORS": "{{player}} {{sector}} sektöründe afk",
   "WHO_IS_AFK": "{{player}} afk sektörde",
+  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Lastikte ciddi tanelenme graining — Her an patlama riski var — box, box! 🛞⚠️",
+  "INVALID_LAP_CUT": "Yol kesme nedeniyle geçersiz tur.",
   "RADIO_MESSAGE_LEFT": "Lütfen gönderilecek bir mesaj sağlayın.",
   "RADIO_BAD_USE": "Kullanım: !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Birden fazla oyuncu ile eşleşiyor. Kimlik kullanın veya daha spesifik olun.",
-  "RADIO_NOT_FOUND": "Oyuncu bulunamadı.",
-  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Lastikte ciddi tanelenme graining — Her an patlama riski var — box, box! 🛞⚠️"
+  "RADIO_NOT_FOUND": "Oyuncu bulunamadı."
 }

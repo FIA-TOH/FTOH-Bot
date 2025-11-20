@@ -1,5 +1,5 @@
 import { Language } from "../chat/language";
-import { LeagueTeam } from "../teams/teams";
+import { leagueScuderia } from "../scuderias/scuderias";
 import { PitStep } from "../tires&pits/pitMessaging";
 import { PitResult } from "../tires&pits/pitStopFunctions";
 
@@ -24,7 +24,7 @@ export interface PlayerInfo {
   isInTheRoom: boolean;
   afk: boolean;
   afkAlert: boolean;
-  leagueTeam: string | null;
+  leagueScuderia: string | null;
   didHardQualy: boolean;
 
   // Propriedades de corrida e volta
@@ -88,6 +88,8 @@ export interface PlayerInfo {
 
   cutPenaltyEndTime?: number;
   cutPenaltyMultiplier?: number;
+  cuttedTrackOnThisLap?: boolean;
+  lastLapValid?: boolean;
 
   lastDir?: Direction;
   slipTicks?: number;

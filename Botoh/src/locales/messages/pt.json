@@ -123,8 +123,8 @@
   "CODE_WRONG": "Codigo errado! Digite o codigo correto e ao contrario.",
   "PRESENTATION_LAP": "Volta de apresentação! Sigam devagar e não ultrapassem até a bandeira verde.",
   "SECONDS_TO_FINISH": "A corrida acaba em {{segundos}} segundos",
-  "TEAM_DEFINED": "Equipe definida com sucesso: {{name}} ({{tag}})",
-  "TEAM_ERROR": "Equipe não encontrada: {{value}}. Verifique a tag ou o nome.",
+  "SCUDERIA_DEFINED": "Equipe definida com sucesso: {{name}} ({{tag}})",
+  "SCUDERIA_ERROR": "Equipe não encontrada: {{value}}. Verifique a tag ou o nome.",
   "AVAILABLE_COMMANDS": "Comandos disponíveis:",
   "QUALY_STARTING": "Em {{segundos}}s a qualificatória iniciará.",
   "RACE_STARTING": "Em {{segundos}}s a corrida iniciará.",
@@ -148,9 +148,10 @@
   "CANNOT_LEAVE_BOX": "⛔ Você não pode sair do box ainda!",
   "WHO_IS_AFK_SECTORS": "{{player}} está afk no setor {{sector}}",
   "WHO_IS_AFK": "{{player}} está afk no setor",
+  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Estamos vendo muito graining — Possível estouro de pneu a qualquer momento — box, box! 🛞⚠️",
+  "INVALID_LAP_CUT": "Volta inválida devido a corte de pista.",
   "RADIO_MESSAGE_LEFT": "Por favor, forneça uma mensagem para enviar.",
   "RADIO_BAD_USE": "Uso: !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Vários jogadores coincidem. Use id ou seja mais específico.",
-  "RADIO_NOT_FOUND": "Jogador não encontrado.",
-  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Estamos vendo muito graining — Possível estouro de pneu a qualquer momento — box, box! 🛞⚠️"
+  "RADIO_NOT_FOUND": "Jogador não encontrado."
 }

@@ -52,8 +52,8 @@ import { handleGhostCommand } from "./playerState/handleGhostCommand";
 import { handleToggleSystems } from "./adminThings/handleToggleSystems";
 import { handleChangePropierties } from "./adminThings/handleChangePropierties";
 import { handleRRCommand } from "./playerState/handleRRCommand";
-import { handleSeeTeams } from "./teams/handleSeeTeams";
-import { handleSetTeam } from "./teams/handleSetTeam";
+import { handleSeeScuderias } from "./scuderia/handleSeeScuderias";
+import { handleSetScuderia } from "./scuderia/handleSetScuderia";
 import { handleExplainServerCommand } from "./chat/handleExplainServerCommand";
 import { handleDiscordCommand } from "../discord/handleDiscordCommand";
 import { handleCameraPlayerFollow } from "./camera/handleCameraPlayerFollow";
@@ -66,6 +66,7 @@ import { handleMoveToBoxCommand } from "../comeBackRace.ts/moveToBox";
 import { handlePlayerQuantity } from "./adminThings/handlePlayerQuantity";
 import { handleLimitPlayerQuantity } from "./adminThings/handleLimitPlayerQuantity";
 import { handleRRPositionCommand } from "./adminThings/handleRRPositionCommand";
+import { handleClearDebrisCommand } from "./debris/handleClearDebrisCommand";
 import { handleRadioCommand } from "./chat/handleRadioCommand";
 
 export type CommandFunction = (
@@ -309,12 +310,12 @@ export type CommandFunction = (
     args: string[],
     room: RoomObject
   ) => void,
-  handleSetTeam: (
+  handleSetScuderia: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
   ) => void,
-  handleSeeTeams: (
+  handleSeeScuderias: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
@@ -370,6 +371,11 @@ export type CommandFunction = (
     room: RoomObject
   ) => void,
   handleRRPositionCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void,
+  handleClearDebrisCommand: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
@@ -437,8 +443,8 @@ function importCommandsByLanguage(commandFunctions: {
         handleNerfListCommand,
         handlePresentationLapCommand,
         handleChangePropierties,
-        handleSetTeam,
-        handleSeeTeams,
+        handleSetScuderia,
+        handleSeeScuderias,
         handleDiscordCommand,
         handleCameraProperties,
         handleCameraPlayerFollow,
@@ -450,6 +456,7 @@ function importCommandsByLanguage(commandFunctions: {
         handlePlayerQuantity,
         handleLimitPlayerQuantity,
         handleRRPositionCommand,
+        handleClearDebrisCommand,
         handleRadioCommand
       ),
     }),
@@ -510,8 +517,8 @@ function importCommands(...commandFunction: CommandFunction[]): Commands {
         handleNerfListCommand,
         handlePresentationLapCommand,
         handleChangePropierties,
-        handleSetTeam,
-        handleSeeTeams,
+        handleSetScuderia,
+        handleSeeScuderias,
         handleDiscordCommand,
         handleCameraProperties,
         handleCameraPlayerFollow,
@@ -523,6 +530,7 @@ function importCommands(...commandFunction: CommandFunction[]): Commands {
         handlePlayerQuantity,
         handleLimitPlayerQuantity,
         handleRRPositionCommand,
+        handleClearDebrisCommand,
         handleRadioCommand
       ),
     }),

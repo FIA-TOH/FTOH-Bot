@@ -8,8 +8,6 @@ Atualizar alguns mapas
 
 # To-do rapidos
 
-ENviar resultado do training a cada X horas
-Treino reiniciar a cada X minutos
 Erro rejoin
 mensagens discord sem lag
 
@@ -22,7 +20,7 @@ Damping modifier
 Rain system
 Crash system
 Car broken system
-Auto yellow flag system
+Auto yellow flag system and safety car commands
 New tyres
 P&D
 API para fazer gráfico de posicão

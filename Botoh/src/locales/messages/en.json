@@ -123,8 +123,8 @@
   "CODE_WRONG": "Wrong code! Enter the correct code reversed.",
   "PRESENTATION_LAP": "Presentation lap! Follow slowly and do not overtake until the green flag!",
   "SECONDS_TO_FINISH": "The race ends in {{segundos}} seconds",
-  "TEAM_DEFINED": "Team successfully set: {{name}} ({{tag}})",
-  "TEAM_ERROR": "Team not found: {{value}}. Please check the tag or the name.",
+  "SCUDERIA_DEFINED": "Team successfully set: {{name}} ({{tag}})",
+  "SCUDERIA_ERROR": "Team not found: {{value}}. Please check the tag or the name.",
   "QUALY_STARTING": "In {{segundos}}s the qualifying will start.",
   "RACE_STARTING": "In {{segundos}}s the race will start.",
   "CHAT_MUTED": "SILENCE! The chat is now muted!",
@@ -146,9 +146,10 @@
   "CANNOT_LEAVE_BOX": "⛔ You cannot leave the box yet!",
   "WHO_IS_AFK_SECTORS": "{{player}} is afk in sector {{sector}}",
   "WHO_IS_AFK": "{{player}} is afk in sector",
+  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! We’re seeing heavy graining — Expect a possible blowout — box, box! 🛞⚠️",
+  "INVALID_LAP_CUT": "Invalid lap due to track cutting.",
   "RADIO_MESSAGE_LEFT": "Please provide a message to send.",
   "RADIO_BAD_USE": "Usage: !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Multiple players match. Use id or be more specific.",
-  "RADIO_NOT_FOUND": "Player not found.",
-  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! We’re seeing heavy graining — Expect a possible blowout — box, box! 🛞⚠️"
+  "RADIO_NOT_FOUND": "Player not found."
 }

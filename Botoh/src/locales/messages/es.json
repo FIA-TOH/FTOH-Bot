@@ -123,8 +123,8 @@
   "CODE_WRONG": "¡Código incorrecto! Ingresa el código correcto y al revés.",
   "PRESENTATION_LAP": "¡Vuelta de presentación! Sigan lentamente y no adelanten hasta la bandera verde.",
   "SECONDS_TO_FINISH": "La carrera termina en {{segundos}} segundos",
-  "TEAM_DEFINED": "Equipo asignado con éxito: {{name}} ({{tag}})",
-  "TEAM_ERROR": "Equipo no encontrado: {{value}}. Verifica la etiqueta o el nombre.",
+  "SCUDERIA_DEFINED": "Equipo asignado con éxito: {{name}} ({{tag}})",
+  "SCUDERIA_ERROR": "Equipo no encontrado: {{value}}. Verifica la etiqueta o el nombre.",
   "QUALY_STARTING": "En {{segundos}}s comenzará la clasificación.",
   "RACE_STARTING": "En {{segundos}}s comenzará la carrera.",
   "CHAT_MUTED": "¡SILENCIO! ¡El chat ahora está silenciado!",
@@ -146,9 +146,10 @@
   "CANNOT_LEAVE_BOX": "⛔ No puedes sair de los boxes!",
   "WHO_IS_AFK_SECTORS": "{{player}} está afk en el sector {{sector}}",
   "WHO_IS_AFK": "{{player}} está afk en el sector",
+  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Vemos un fuerte graining — Posible reventón de neumático en cualquier momento — box, box! 🛞⚠️",
+  "INVALID_LAP_CUT": "Vuelta inválida debido a corte de pista.",
   "RADIO_MESSAGE_LEFT": "Por favor, proporciona un mensaje para enviar.",
   "RADIO_BAD_USE": "Uso: !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Varios jugadores coinciden. Usa id o sé más específico.",
-  "RADIO_NOT_FOUND": "Jugador no encontrado.",
-  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Vemos un fuerte graining — Posible reventón de neumático en cualquier momento — box, box! 🛞⚠️"
+  "RADIO_NOT_FOUND": "Jugador no encontrado."
 }

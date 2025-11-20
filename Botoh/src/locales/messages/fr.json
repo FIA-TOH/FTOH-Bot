@@ -123,8 +123,8 @@
   "CODE_WRONG": "Code incorrect ! Saisissez le code correct à l'envers.",
   "PRESENTATION_LAP": "Tour de présentation ! Roulez lentement et ne dépassez pas avant le drapeau vert.",
   "SECONDS_TO_FINISH": "La course se termine dans {{segundos}} secondes",
-  "TEAM_DEFINED": "Équipe définie avec succès : {{name}} ({{tag}})",
-  "TEAM_ERROR": "Équipe non trouvée : {{value}}. Veuillez vérifier la balise ou le nom.",
+  "SCUDERIA_DEFINED": "Équipe définie avec succès : {{name}} ({{tag}})",
+  "SCUDERIA_ERROR": "Équipe non trouvée : {{value}}. Veuillez vérifier la balise ou le nom.",
   "QUALY_STARTING": "Dans {{segundos}}s, la qualification commencera.",
   "RACE_STARTING": "Dans {{segundos}}s, la course commencera.",
   "CHAT_MUTED": "SILENCE ! Le chat est maintenant muet !",
@@ -146,9 +146,10 @@
   "CANNOT_LEAVE_BOX": "⛔ Vous ne pouvez pas encore quitter le box !",
   "WHO_IS_AFK_SECTORS": "{{player}} est afk dans le secteur {{sector}}",
   "WHO_IS_AFK": "{{player}} est afk dans le secteur",
+  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Nous voyons un fort grainage — Risque d’éclatement imminent — box, box! 🛞⚠️",
+  "INVALID_LAP_CUT": "Tour invalide à cause d’un coup de piste.",
   "RADIO_MESSAGE_LEFT": "Veuillez fournir un message à envoyer.",
   "RADIO_BAD_USE": "Utilisation : !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Plusieurs joueurs trouvés. Veuillez être plus précis.",
-  "RADIO_NOT_FOUND": "Joueur non trouvé.",
-  "TYRES_ABOUT_TO_BLOWN": "⚠️🛞 BOX BOX! Nous voyons un fort grainage — Risque d’éclatement imminent — box, box! 🛞⚠️"
+  "RADIO_NOT_FOUND": "Joueur non trouvé."
 }

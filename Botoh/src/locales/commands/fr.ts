@@ -242,12 +242,12 @@ export default function fr_commands(
     args: string[],
     room: RoomObject
   ) => void,
-  handleSetTeam: (
+  handleSetScuderia: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
   ) => void,
-  handleSeeTeams: (
+  handleSeeScuderias: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
@@ -303,6 +303,11 @@ export default function fr_commands(
     room: RoomObject
   ) => void,
   handleRRPositionCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void,
+  handleClearDebrisCommand: (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
@@ -366,8 +371,8 @@ export default function fr_commands(
     "!nerf": handleNerfListCommand,
     "!presentation": handlePresentationLapCommand,
     "!constants": handleChangePropierties,
-    "!team": handleSetTeam,
-    "!voir_equipes": handleSeeTeams,
+    "!team": handleSetScuderia,
+    "!voir_equipes": handleSeeScuderias,
     "!discord": handleDiscordCommand,
     "!camera_properties": handleCameraProperties,
     "!camera_id": handleCameraPlayerFollow,
@@ -379,6 +384,7 @@ export default function fr_commands(
     "!player_quantity": handlePlayerQuantity,
     "!set_max_players": handleLimitPlayerQuantity,
     "!set_rr": handleRRPositionCommand,
+    "!clear_debris": handleClearDebrisCommand,
     "!radio": handleRadioCommand,
   };
 }

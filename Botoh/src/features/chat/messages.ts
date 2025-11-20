@@ -1479,34 +1479,34 @@ export const MESSAGES = {
     }),
   }),
 
-  TEAM_DEFINED: (name: string, tag: string): LocalizedMessageFunction => ({
-    en: replaceTemplateString(en_messages.TEAM_DEFINED, {
+  SCUDERIA_DEFINED: (name: string, tag: string): LocalizedMessageFunction => ({
+    en: replaceTemplateString(en_messages.SCUDERIA_DEFINED, {
       name: name,
       tag: tag,
     }),
-    es: replaceTemplateString(es_messages.TEAM_DEFINED, {
+    es: replaceTemplateString(es_messages.SCUDERIA_DEFINED, {
       name: name,
       tag: tag,
     }),
-    fr: replaceTemplateString(fr_messages.TEAM_DEFINED, {
+    fr: replaceTemplateString(fr_messages.SCUDERIA_DEFINED, {
       name: name,
       tag: tag,
     }),
-    tr: replaceTemplateString(tr_messages.TEAM_DEFINED, {
+    tr: replaceTemplateString(tr_messages.SCUDERIA_DEFINED, {
       name: name,
       tag: tag,
     }),
-    pt: replaceTemplateString(pt_messages.TEAM_DEFINED, {
+    pt: replaceTemplateString(pt_messages.SCUDERIA_DEFINED, {
       name: name,
       tag: tag,
     }),
   }),
-  TEAM_ERROR: (tag: string): LocalizedMessageFunction => ({
-    en: replaceTemplateString(en_messages.TEAM_ERROR, { tag: tag }),
-    es: replaceTemplateString(es_messages.TEAM_ERROR, { tag: tag }),
-    fr: replaceTemplateString(fr_messages.TEAM_ERROR, { tag: tag }),
-    tr: replaceTemplateString(tr_messages.TEAM_ERROR, { tag: tag }),
-    pt: replaceTemplateString(pt_messages.TEAM_ERROR, { tag: tag }),
+  SCUDERIA_ERROR: (tag: string): LocalizedMessageFunction => ({
+    en: replaceTemplateString(en_messages.SCUDERIA_ERROR, { tag: tag }),
+    es: replaceTemplateString(es_messages.SCUDERIA_ERROR, { tag: tag }),
+    fr: replaceTemplateString(fr_messages.SCUDERIA_ERROR, { tag: tag }),
+    tr: replaceTemplateString(tr_messages.SCUDERIA_ERROR, { tag: tag }),
+    pt: replaceTemplateString(pt_messages.SCUDERIA_ERROR, { tag: tag }),
   }),
   STARTING_LAP: (): LocalizedMessageFunction => ({
     en: en_messages.STARTING_LAP,
@@ -1709,5 +1709,12 @@ export const MESSAGES = {
     fr: replaceTemplateString(fr_messages.TYRES_ABOUT_TO_BLOWN, {}),
     tr: replaceTemplateString(tr_messages.TYRES_ABOUT_TO_BLOWN, {}),
     pt: replaceTemplateString(pt_messages.TYRES_ABOUT_TO_BLOWN, {}),
+  }),
+  INVALID_LAP_CUT: (): LocalizedMessageFunction => ({
+    en: replaceTemplateString(en_messages.INVALID_LAP_CUT, {}),
+    es: replaceTemplateString(es_messages.INVALID_LAP_CUT, {}),
+    fr: replaceTemplateString(fr_messages.INVALID_LAP_CUT, {}),
+    tr: replaceTemplateString(tr_messages.INVALID_LAP_CUT, {}),
+    pt: replaceTemplateString(pt_messages.INVALID_LAP_CUT, {}),
   }),
 };
