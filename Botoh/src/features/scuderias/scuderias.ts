@@ -142,61 +142,61 @@ export const leagueScuderia: { [key: string]: leagueScuderia } = {
   Gorsche: {
     name: "Gorsche",
     tag: "GOR",
-    color: ScuderiaColours.GORSCHE,
+    color: ScuderiaColors.GORSCHE,
   },
   Ferrari: {
     name: "Ferrari",
     tag: "FER",
-    color: ScuderiaColours.FERRARI,
+    color: ScuderiaColors.FERRARI,
   },
   HRT: {
     name: "HRT",
     tag: "HRT",
-    color: ScuderiaColours.HRT,
+    color: ScuderiaColors.HRT,
   },
   RedBull: {
     name: "Red Bull",
     tag: "RBR",
-    color: ScuderiaColours.REDBULL,
+    color: ScuderiaColors.REDBULL,
   },
   Alpine: {
     name: "Alpine",
     tag: "ALP",
-    color: ScuderiaColours.ALPINE,
+    color: ScuderiaColors.ALPINE,
   },
   RB: {
     name: "RB",
     tag: "RB",
-    color: ScuderiaColours.RB,
+    color: ScuderiaColors.RB,
   },
   Prema: {
     name: "Prema",
     tag: "PRE",
-    color: ScuderiaColours.PREMA,
+    color: ScuderiaColors.PREMA,
   },
   Williams: {
     name: "Williams",
     tag: "WIL",
-    color: ScuderiaColours.WILLIAMS,
+    color: ScuderiaColors.WILLIAMS,
   },
   Hispalis: {
     name: "Hispalis",
     tag: "HIS",
-    color: ScuderiaColours.HISPALIS,
+    color: ScuderiaColors.HISPALIS,
   },
   Meise: {
     name: "Meise",
     tag: "MEI",
-    color: ScuderiaColours.MEISE,
+    color: ScuderiaColors.MEISE,
   },
   Bugatti: {
     name: "Bugatti",
     tag: "BUG",
-    color: ScuderiaColours.BUGATTI,
+    color: ScuderiaColors.BUGATTI,
   },
   Pagani: {
     name: "Pagani",
     tag: "PAG",
-    color: ScuderiaColours.PAGANI,
+    color: ScuderiaColors.PAGANI,
   },
 };
