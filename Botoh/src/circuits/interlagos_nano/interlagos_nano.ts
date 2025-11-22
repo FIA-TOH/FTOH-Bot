@@ -10,7 +10,7 @@ const interlagos_nano_raw = readFileSync(join(__dirname, "interlagos_nano.hbs"),
 const interlagos_nano_json = JSON.parse(interlagos_nano_raw);
 
 
-
+//fixed
 
 const INTERLAGOS_NANO_INFO: CircuitInfo = {
   finishLine: {
