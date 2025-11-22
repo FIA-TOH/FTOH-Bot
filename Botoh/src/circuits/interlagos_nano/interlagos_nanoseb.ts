@@ -1,18 +1,18 @@
-
-
 import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
 import { Circuit, CircuitInfo, Direction } from "../Circuit";
 
-const interlagos_nano_raw = readFileSync(join(__dirname, "interlagos_nano.hbs"), "utf-8");
-const interlagos_nano_json = JSON.parse(interlagos_nano_raw);
-
+const interlagos_nanoseb_raw = readFileSync(
+  join(__dirname, "interlagos_nanoseb.hbs"),
+  "utf-8"
+);
+const interlagos_nanoseb_json = JSON.parse(interlagos_nanoseb_raw);
 
 //fixedfixed
 
-const INTERLAGOS_NANO_INFO: CircuitInfo = {
+const INTERLAGOS_NANOSEB_INFO: CircuitInfo = {
   finishLine: {
     bounds: {
       minX: -15,
@@ -86,14 +86,14 @@ const INTERLAGOS_NANO_INFO: CircuitInfo = {
   ],
   checkpoints: [],
   lastPlace: {
-    x: interlagos_nano_json.redSpawnPoints[
-      interlagos_nano_json.redSpawnPoints.length - 1
+    x: interlagos_nanoseb_json.redSpawnPoints[
+      interlagos_nanoseb_json.redSpawnPoints.length - 1
     ][0],
-    y: interlagos_nano_json.redSpawnPoints[
-      interlagos_nano_json.redSpawnPoints.length - 1
+    y: interlagos_nanoseb_json.redSpawnPoints[
+      interlagos_nanoseb_json.redSpawnPoints.length - 1
     ][1],
   },
-  BestTime: bestTimes.interlagos_nano,
+  BestTime: bestTimes.interlagos_nanoseb,
   MainColor: [0x10a100, 0xffff00, 0x10a100],
   AvatarColor: 0x00008c,
   Angle: 90,
@@ -101,7 +101,7 @@ const INTERLAGOS_NANO_INFO: CircuitInfo = {
   Votes: 0,
 };
 
-export const INTERLAGOS_NANO: Circuit = {
-  map: interlagos_nano_raw,
-  info: INTERLAGOS_NANO_INFO,
+export const INTERLAGOS_NANOSEB: Circuit = {
+  map: interlagos_nanoseb_raw,
+  info: INTERLAGOS_NANOSEB_INFO,
 };
