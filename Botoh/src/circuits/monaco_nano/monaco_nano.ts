@@ -11,7 +11,7 @@ const MONACO_NANO_INFO: CircuitInfo = {
   finishLine: {
     bounds: {
       minX: 17,
-      maxX: 167,
+      maxX: 294,
       minY: -15,
       maxY: 15,
     },
