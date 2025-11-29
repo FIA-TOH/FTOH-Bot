@@ -47,6 +47,8 @@ const trackNameMapping: { [key: string]: string } = {
   grecia: "Autodromo Grecia By Nanoseb",
   monaco_nano: "Monaco Circuit By Nanoseb",
   interlagos_nanoseb: "Autodromo Jose Carlos Pace By Nanoseb",
+  bahrain_clic: "FH Bahrain by Cliquot",
+  imola_old: "Enzo and Dino Ferrari International Circuit 1994 (Imola 1994) By Nanoseb",
 };
 
 export const bestTimes: { [key: string]: [number, string, string] } = {
@@ -103,6 +105,8 @@ export const bestTimes: { [key: string]: [number, string, string] } = {
   grecia: [64.681, "Ximbastian Vettel", "Autodromo Grecia By Nanoseb"],
   monaco_nano: [42.147, "Joninho", "Monaco Circuit By Nanoseb"],
   interlagos_nanoseb: [999.99, "undefined", "Autodromo Jose Carlos Pace By Nanoseb"],
+  bahrain_clic: [999.99, "undefined", "FH Bahrain by Cliquot"],
+  imola_old: [999.99, "undefined", "Enzo and Dino Ferrari International Circuit 1994 (Imola 1994) By Nanoseb"],
 };
 export const getAbbreviatedTrackName = (
   fullTrackName: string

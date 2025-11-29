@@ -87,6 +87,8 @@ import { DUBAI } from "../../circuits/dubai/dubai";
 import { GRECIA } from "../../circuits/grecia/grecia";
 import { MONACO_NANO } from "../../circuits/monaco_nano/monaco_nano";
 import { INTERLAGOS_NANOSEB } from "../../circuits/interlagos_nano/interlagos_nanoseb";
+import { BAHRAIN_CLIC } from "../../circuits/bahrain_clic/bahrain_clic";
+import { IMOLA_OLD } from "../../circuits/imola_old/imola_old";
 
 // import {DAYTONA} from "../circuits/daytona/daytona";
 // import {BARCELONA} from "../circuits/barcelona/barcelona";
@@ -145,6 +147,8 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       GRECIA,
       MONACO_NANO,
       INTERLAGOS_NANOSEB,
+      BAHRAIN_CLIC,
+      IMOLA_OLD,
       INDIANAPOLIS,
       PODIUM,
       WAITROOM,
