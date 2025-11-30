@@ -38,3 +38,31 @@ export function setQualiTime(
   room.setTimeLimit(qualiTime);
   sendSuccessMessage(room, msg);
 }
+
+export function setRaceTime(
+  player: PlayerObject,
+  time: number,
+  room: RoomObject
+) {
+  if (generalGameMode !== GeneralGameMode.GENERAL_RACE) {
+    sendErrorMessage(room, MESSAGES.NOT_IN_RACE(), player.id);
+    return false;
+  }
+
+  if (isNaN(time) || time < 0) {
+    sendErrorMessage(room, MESSAGES.INVALID_TIME(), player.id);
+    return false;
+  }
+
+  let msg;
+  if (time === 0) {
+    raceTime = Number.MAX_VALUE;
+    msg = MESSAGES.INFINITE_QUALI();
+  } else {
+    raceTime = time;
+    msg = MESSAGES.WEC_TIME(raceTime);
+  }
+
+  room.setTimeLimit(raceTime);
+  sendSuccessMessage(room, msg);
+}

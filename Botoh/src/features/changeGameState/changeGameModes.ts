@@ -17,6 +17,7 @@ export enum GameMode {
   INDY = "indy",
   WAITING = "waiting",
   HARD_QUALY = "hard_qualy",
+  WEC = "wec",
 }
 
 export enum GeneralGameMode {
@@ -53,6 +54,9 @@ export function changeGameMode(newMode: GameMode, room: RoomObject) {
       break;
     case GameMode.HARD_QUALY:
       result = handleHardQualyMode(room);
+      break;
+    case GameMode.WEC:
+      result = handleWecMode(room);
       break;
   }
 
@@ -123,4 +127,14 @@ function handleHardQualyMode(room: RoomObject) {
   enableTyres(false);
   sendSuccessMessage(room, MESSAGES.TIME_TO_QUALY());
   changeGeneralGameMode(GeneralGameMode.GENERAL_QUALY);
+}
+
+function handleWecMode(room: RoomObject) {
+  enableGas(false);
+  enableSlipstream(true);
+  setGhostMode(room, false);
+  handleRREnabledCommand(undefined, ["false"], room);
+  enableTyres(true);
+  sendSuccessMessage(room, MESSAGES.TIME_TO_WEC(raceTime));
+  changeGeneralGameMode(GeneralGameMode.GENERAL_RACE);
 }

@@ -23,14 +23,20 @@ export function endRaceSession(
     gameMode !== GameMode.HARD_QUALY;
 
   const shouldStopForTimeLimit =
-    !LEAGUE_MODE &&
-    ((generalGameMode === GeneralGameMode.GENERAL_QUALY &&
-      scores?.time > qualiTime * 60) ||
+    (
+      !LEAGUE_MODE ||
+      gameMode === GameMode.WEC
+    ) &&
+    (
+      (generalGameMode === GeneralGameMode.GENERAL_QUALY &&
+        scores?.time > qualiTime * 60) ||
       (generalGameMode === GeneralGameMode.GENERAL_RACE &&
-        scores?.time > raceTime * 60));
+        scores?.time > raceTime * 60)
+    );
 
   if (shouldStopForNoPlayers || shouldStopForTimeLimit) {
     changeGameStoppedNaturally(true);
     room.stopGame();
   }
 }
+

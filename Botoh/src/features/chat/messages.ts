@@ -5,6 +5,7 @@ import tr_messages from "../../locales/messages/tr.json";
 import pt_messages from "../../locales/messages/pt.json";
 import { playerList } from "../changePlayerState/playerList";
 import { DEFAULT_LANGUAGE, Language } from "./language";
+import { raceTime } from "../changeGameState/qualy/qualiMode";
 
 export function getPlayerLanguage(playerID: number): Language {
   if (playerID === null) return DEFAULT_LANGUAGE;
@@ -402,12 +403,38 @@ export const MESSAGES = {
     }),
   }),
 
+    WEC_TIME: (minutes: number): LocalizedMessageFunction => ({
+    en: replaceTemplateString(en_messages.WEC_TIME, {
+      minutes: minutes.toString(),
+    }),
+    es: replaceTemplateString(es_messages.WEC_TIME, {
+      minutes: minutes.toString(),
+    }),
+    fr: replaceTemplateString(fr_messages.WEC_TIME, {
+      minutes: minutes.toString(),
+    }),
+    tr: replaceTemplateString(tr_messages.WEC_TIME, {
+      minutes: minutes.toString(),
+    }),
+    pt: replaceTemplateString(pt_messages.WEC_TIME, {
+      minutes: minutes.toString(),
+    }),
+  }),
+
   NOT_IN_QUALI: (): LocalizedMessageFunction => ({
     en: en_messages.NOT_IN_QUALI,
     es: es_messages.NOT_IN_QUALI,
     fr: fr_messages.NOT_IN_QUALI,
     tr: tr_messages.NOT_IN_QUALI,
     pt: pt_messages.NOT_IN_QUALI,
+  }),
+
+    NOT_IN_RACE: (): LocalizedMessageFunction => ({
+    en: en_messages.NOT_IN_RACE,
+    es: es_messages.NOT_IN_RACE,
+    fr: fr_messages.NOT_IN_RACE,
+    tr: tr_messages.NOT_IN_RACE,
+    pt: pt_messages.NOT_IN_RACE,
   }),
 
   INVALID_TIME: (): LocalizedMessageFunction => ({
@@ -1717,4 +1744,22 @@ export const MESSAGES = {
     tr: replaceTemplateString(tr_messages.INVALID_LAP_CUT, {}),
     pt: replaceTemplateString(pt_messages.INVALID_LAP_CUT, {}),
   }),
+  TIME_TO_WEC: (raceTime: number): LocalizedMessageFunction => ({
+    en: replaceTemplateString(en_messages.TIME_TO_WEC, {
+      raceTime: raceTime.toString(),
+    }),
+    es: replaceTemplateString(es_messages.TIME_TO_WEC, {
+      raceTime: raceTime.toString(),
+    }),
+    fr: replaceTemplateString(fr_messages.TIME_TO_WEC, {
+      raceTime: raceTime.toString(),
+    }),
+    tr: replaceTemplateString(tr_messages.TIME_TO_WEC, {
+      raceTime: raceTime.toString(),
+    }),
+    pt: replaceTemplateString(pt_messages.TIME_TO_WEC, {
+      raceTime: raceTime.toString(),
+    }),
+  }),
 };
+

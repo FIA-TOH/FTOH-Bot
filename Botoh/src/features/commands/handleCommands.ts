@@ -68,6 +68,8 @@ import { handleLimitPlayerQuantity } from "./adminThings/handleLimitPlayerQuanti
 import { handleRRPositionCommand } from "./adminThings/handleRRPositionCommand";
 import { handleClearDebrisCommand } from "./debris/handleClearDebrisCommand";
 import { handleRadioCommand } from "./chat/handleRadioCommand";
+import { handleWModeCommand } from "./gameMode/wec/handleWModeCommand";
+import { handleWTimeCommand } from "./gameMode/wec/handleWTimeCommand";
 
 export type CommandFunction = (
   handleAdminCommand: (
@@ -384,7 +386,17 @@ export type CommandFunction = (
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
-  ) => void
+  ) => void,
+  handleWModeCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void,
+  handleWTimeCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void,
 ) => Commands;
 
 function importCommandsByLanguage(commandFunctions: {
@@ -457,7 +469,9 @@ function importCommandsByLanguage(commandFunctions: {
         handleLimitPlayerQuantity,
         handleRRPositionCommand,
         handleClearDebrisCommand,
-        handleRadioCommand
+        handleRadioCommand,
+        handleWModeCommand,
+        handleWTimeCommand,
       ),
     }),
     {}
@@ -531,7 +545,9 @@ function importCommands(...commandFunction: CommandFunction[]): Commands {
         handleLimitPlayerQuantity,
         handleRRPositionCommand,
         handleClearDebrisCommand,
-        handleRadioCommand
+        handleRadioCommand,
+        handleWModeCommand,
+        handleWTimeCommand,
       ),
     }),
     {}

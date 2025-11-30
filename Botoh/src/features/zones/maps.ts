@@ -86,7 +86,7 @@ import { AUTODROMO_NANOSEB } from "../../circuits/autodromo_nanoseb/autodromo_na
 import { DUBAI } from "../../circuits/dubai/dubai";
 import { GRECIA } from "../../circuits/grecia/grecia";
 import { MONACO_NANO } from "../../circuits/monaco_nano/monaco_nano";
-import { INTERLAGOS_NANOSEB } from "../../circuits/interlagos_nano/interlagos_nanoseb";
+import { INTERLAGOS_NANOSEB } from "../../circuits/interlagos_nanoseb/interlagos_nanoseb";
 import { BAHRAIN_CLIC } from "../../circuits/bahrain_clic/bahrain_clic";
 import { IMOLA_OLD } from "../../circuits/imola_old/imola_old";
 

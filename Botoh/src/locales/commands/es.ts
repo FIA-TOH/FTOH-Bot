@@ -316,7 +316,17 @@ export default function es_commands(
     byPlayer: PlayerObject,
     args: string[],
     room: RoomObject
-  ) => void
+  ) => void,
+    handleWModeCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void,
+    handleWTimeCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void,
 ): Commands {
   return {
     "!admin": handleAdminCommand,
@@ -389,5 +399,7 @@ export default function es_commands(
     "!set_rr": handleRRPositionCommand,
     "!clear_debris": handleClearDebrisCommand,
     "!radio": handleRadioCommand,
+    "!wmode": handleWModeCommand,
+    "!wtime": handleWTimeCommand,
   };
 }

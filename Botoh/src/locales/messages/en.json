@@ -151,5 +151,8 @@
   "RADIO_MESSAGE_LEFT": "Please provide a message to send.",
   "RADIO_BAD_USE": "Usage: !radio <playerId|playerName> <message>",
   "MULTIPE_RADIO": "Multiple players match. Use id or be more specific.",
-  "RADIO_NOT_FOUND": "Player not found."
+  "RADIO_NOT_FOUND": "Player not found.",
+  "TIME_TO_WEC": "🚨WEC Mode with {{raceTime}} minutes! Get ready!🚨",
+  "NOT_IN_RACE": "You are not in the race",
+  "WEC_TIME": "Qualification time is now {{minutes}} minutes."
 }
