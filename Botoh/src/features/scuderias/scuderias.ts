@@ -6,8 +6,21 @@ import { AstonMaia } from "./scuderia/astonMaia";
 import { Bracchiari } from "./scuderia/bracchiari";
 import { McLarper } from "./scuderia/mclarper";
 import { Penshiryu } from "./scuderia/penshiryu";
+import { Gorsche } from "./scuderia/gorsche";
 import { ScuderiaColors } from "./scuderiaColours";
 import { Suspension } from "./tyres";
+import { BmwSwiss } from "./scuderia/bmwSwiss";
+import { Ferrari } from "./scuderia/ferrari";
+import { HRT } from "./scuderia/hrt";
+import { BmwMotorforce } from "./scuderia/bmwMotorforce";
+import { Alpine } from "./scuderia/alpine";
+import { Cadillac } from "./scuderia/cadillac";
+import { Prema } from "./scuderia/prema";
+import { Mclaren } from "./scuderia/mclaren";
+import { Hispalis } from "./scuderia/hispalis";
+import { Meise } from "./scuderia/meise";
+import { Genske } from "./scuderia/genske";
+import { Yamaha } from "./scuderia/yamaha";
 
 export interface leagueScuderia {
   name: string;
@@ -22,7 +35,7 @@ export interface leagueScuderia {
 
 export const leagueScuderia: { [key: string]: leagueScuderia } = {
   //  Penshiryu,
-  // AstonMaia,
+  AstonMaia,
   // McLarper,
   // Bracchiari,
   // Haax: {
@@ -106,64 +119,17 @@ export const leagueScuderia: { [key: string]: leagueScuderia } = {
   //   tag: "PH",
   //   color: ScuderiaColours.PHM,
   // },*/
-  Gorsche: {
-    name: "Gorsche",
-    tag: "GOR",
-    color: ScuderiaColors.GORSCHE,
-  },
-  Ferrari: {
-    name: "Ferrari",
-    tag: "FER",
-    color: ScuderiaColors.FERRARI,
-  },
-  HRT: {
-    name: "HRT",
-    tag: "HRT",
-    color: ScuderiaColors.HRT,
-  },
-  RedBull: {
-    name: "Red Bull",
-    tag: "RBR",
-    color: ScuderiaColors.REDBULL,
-  },
-  Alpine: {
-    name: "Alpine",
-    tag: "ALP",
-    color: ScuderiaColors.ALPINE,
-  },
-  RB: {
-    name: "RB",
-    tag: "RB",
-    color: ScuderiaColors.RB,
-  },
-  Prema: {
-    name: "Prema",
-    tag: "PRE",
-    color: ScuderiaColors.PREMA,
-  },
-  Williams: {
-    name: "Williams",
-    tag: "WIL",
-    color: ScuderiaColors.WILLIAMS,
-  },
-  Hispalis: {
-    name: "Hispalis",
-    tag: "HIS",
-    color: ScuderiaColors.HISPALIS,
-  },
-  Meise: {
-    name: "Meise",
-    tag: "MEI",
-    color: ScuderiaColors.MEISE,
-  },
-  Bugatti: {
-    name: "Bugatti",
-    tag: "BUG",
-    color: ScuderiaColors.BUGATTI,
-  },
-  Pagani: {
-    name: "Pagani",
-    tag: "PAG",
-    color: ScuderiaColors.PAGANI,
-  },
+  Gorsche,
+  Ferrari,
+  HRT,
+  BmwSwiss,
+  BmwMotorforce,
+  Alpine,
+  Cadillac,
+  Prema,
+  Mclaren,
+  Hispalis,
+  Meise,
+  Genske,
+  Yamaha,
 };

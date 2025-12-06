@@ -24,13 +24,13 @@ function calcAccelerationGrip(
   let targetBoost = 0;
 
   if (speed <= initialEnd) {
-    // room.setPlayerAvatar(playerId, "I");
+    room.setPlayerAvatar(playerId, "I");
     targetBoost = toDecimal(engine.initialAccelerationNerf);
   } else if (speed <= medialEnd) {
-    // room.setPlayerAvatar(playerId, "M");
+    room.setPlayerAvatar(playerId, "M");
     targetBoost = toDecimal(engine.medialAccelerationNerf);
   } else {
-    // room.setPlayerAvatar(playerId, "F");
+    room.setPlayerAvatar(playerId, "F");
     targetBoost = toDecimal(engine.finalAccelerationNerf);
   }
 
