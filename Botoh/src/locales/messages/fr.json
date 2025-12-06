@@ -154,5 +154,6 @@
   "RADIO_NOT_FOUND": "Joueur non trouvé.",
   "TIME_TO_WEC": "🚨Mode WEC avec {{raceTime}} minutes ! Préparez-vous !🚨",
   "NOT_IN_RACE": "Vous n'êtes pas dans la course ",
-  "WEC_TIME": "Le temps de qualification est maintenant de {{minutes}}."
+  "WEC_TIME": "Le temps de qualification est maintenant de {{minutes}}.",
+  "SOFT_CUT_PENALTY": "⚠️ Vous avez coupé la piste! Passez par la ligne bleue ou vous serez pénalisé!"
 }

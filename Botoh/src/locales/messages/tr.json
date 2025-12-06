@@ -154,5 +154,6 @@
   "RADIO_NOT_FOUND": "Oyuncu bulunamadı.",
   "TIME_TO_WEC": "🚨WEC Modu {{raceTime}} dakika! Hazırlanın!🚨",
   "NOT_IN_RACE": "Yarışta değilsiniz ",
-  "WEC_TIME": "Sıralama süresi artık {{minutes}} dakika."
+  "WEC_TIME": "Sıralama süresi artık {{minutes}} dakika.",
+  "SOFT_CUT_PENALTY": "⚠️ Yolu kestiniz! Mavi çizginin içinden geçin veya ceza alacaksınız!"
 }

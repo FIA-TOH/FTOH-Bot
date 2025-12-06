@@ -70,6 +70,7 @@ import { handleClearDebrisCommand } from "./debris/handleClearDebrisCommand";
 import { handleRadioCommand } from "./chat/handleRadioCommand";
 import { handleWModeCommand } from "./gameMode/wec/handleWModeCommand";
 import { handleWTimeCommand } from "./gameMode/wec/handleWTimeCommand";
+import { handleUpgradeCommand } from "./scuderia/handleUpgradeCommand";
 
 export type CommandFunction = (
   handleAdminCommand: (
@@ -397,6 +398,11 @@ export type CommandFunction = (
     args: string[],
     room: RoomObject
   ) => void,
+  handleUpgradeCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void
 ) => Commands;
 
 function importCommandsByLanguage(commandFunctions: {
@@ -472,6 +478,7 @@ function importCommandsByLanguage(commandFunctions: {
         handleRadioCommand,
         handleWModeCommand,
         handleWTimeCommand,
+        handleUpgradeCommand
       ),
     }),
     {}
@@ -548,6 +555,7 @@ function importCommands(...commandFunction: CommandFunction[]): Commands {
         handleRadioCommand,
         handleWModeCommand,
         handleWTimeCommand,
+        handleUpgradeCommand
       ),
     }),
     {}

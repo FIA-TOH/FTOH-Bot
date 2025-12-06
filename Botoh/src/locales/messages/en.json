@@ -154,5 +154,6 @@
   "RADIO_NOT_FOUND": "Player not found.",
   "TIME_TO_WEC": "🚨WEC Mode with {{raceTime}} minutes! Get ready!🚨",
   "NOT_IN_RACE": "You are not in the race",
-  "WEC_TIME": "Qualification time is now {{minutes}} minutes."
+  "WEC_TIME": "Qualification time is now {{minutes}} minutes.",
+  "SOFT_CUT_PENALTY": "⚠️ You cut the track! Go through the blue line or you will be penalized!"
 }

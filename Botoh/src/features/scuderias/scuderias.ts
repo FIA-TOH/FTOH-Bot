@@ -1,41 +1,18 @@
+import { Batery } from "./batery";
+import { Chassis } from "./chassis";
+import { Engine } from "./engine";
+import { PitCrew } from "./pitstop";
+import { AstonMaia } from "./scuderia/astonMaia";
+import { Bracchiari } from "./scuderia/bracchiari";
+import { McLarper } from "./scuderia/mclarper";
+import { Penshiryu } from "./scuderia/penshiryu";
+import { ScuderiaColors } from "./scuderiaColours";
+import { Suspension } from "./tyres";
+
 export interface leagueScuderia {
   name: string;
   tag: string;
   color: number;
-}
-export enum ScuderiaColors {
-  /*  PENSHIRYU = 0xb45568,
-  ASTONMAIA = 0x059988,
-  RUBYBISON = 0x4458a2,
-  MCLARPER = 0xff8700,
-  HAAX = 0xe6002b,
-  MOTORFORCE = 0x06529d,
-  SART = 0x40c3ff,
-  KONARDI = 0x1d618c,
-  LENAULTMOREO = 0xba3232,
-  QUESTI = 0x4b56cc,
-  SIXDENT = 0x9c7efc,
-  JEANBORGHINI = 0xffd500,
-  PEJO = 0xbdbdbd,
-  BRAWNDESCO = 0xddff09,
-  INTERFORCE = 0x83abc9,
-  ALPINO = 0xddbc5f,
-  TOYOSSI = 0x858585,
-  BMW = 0x0066b1,
-  BRACCHIARI = 0xec1c24,
-  PHM = 0x5ef102,*/
-  GORSCHE = 0xf0f0f0,
-  FERRARI = 0xec1c24,
-  HRT = 0xc6c987,
-  REDBULL = 0x1e41ff,
-  ALPINE = 0x2293d1,
-  RB = 0x8295ff,
-  PREMA = 0xff4545,
-  WILLIAMS = 0x37bedd,
-  HISPALIS = 0xff5733,
-  MEISE = 0x8533ff,
-  BUGATTI = 0x010647,
-  PAGANI = 0xd1ffff,
 }
 
 export const leagueScuderia: { [key: string]: leagueScuderia } = {
@@ -59,6 +36,7 @@ export const leagueScuderia: { [key: string]: leagueScuderia } = {
     tag: "MC",
     color: ScuderiaColours.MCLARPER,
   },
+
   Haax: {
     name: "Haax",
     tag: "HX",
@@ -134,6 +112,7 @@ export const leagueScuderia: { [key: string]: leagueScuderia } = {
     tag: "SB",
     color: ScuderiaColours.BRACCHIARI,
   },
+
   PHM: {
     name: "PHM FAX",
     tag: "PH",

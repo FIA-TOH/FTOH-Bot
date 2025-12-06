@@ -328,6 +328,11 @@ export default function en_commands(
     args: string[],
     room: RoomObject
   ) => void,
+  handleUpgradeCommand: (
+    byPlayer: PlayerObject,
+    args: string[],
+    room: RoomObject
+  ) => void
 ): Commands {
   return {
     "!admin": handleAdminCommand,
@@ -398,5 +403,6 @@ export default function en_commands(
     "!radio": handleRadioCommand,
     "!wmode": handleWModeCommand,
     "!wtime": handleWTimeCommand,
+    "!upgrade": handleUpgradeCommand,
   };
 }

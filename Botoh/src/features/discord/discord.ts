@@ -39,7 +39,7 @@ const CUT_TRACK_URL =
 const LEAGUE_REPLAY_URL_FH =
   "https://discord.com/api/webhooks/1441538310022627399/VGla8coTdEgzUFNFdaSJbo369n1BVJySV3fjspTsWcHi0RpBUDeccXYwRrntrcyQrL8i";
 
-  const TRACK_RECORDS_URL_FH =
+const TRACK_RECORDS_URL_FH =
   "https://discord.com/api/webhooks/1441538618463355030/g8EX8Cs2o3YsbZHAGrYjbzAzdxpmf9AqQ_a6ncxQMbQ2qT7yD6_zH8j1YKxRbi5dgXuT";
 
 const CUT_TRACK_URL_FH =
@@ -219,7 +219,11 @@ export function sendDiscordTrackRecord(playerName: string, lapTime: number) {
       ],
     };
 
-    safeSend(/*TRACK_RECORDS_URL*/ TRACK_RECORDS_URL_FH, embed, "TRACK_RECORD_EMBED");
+    safeSend(
+      /*TRACK_RECORDS_URL*/ TRACK_RECORDS_URL_FH,
+      embed,
+      "TRACK_RECORD_EMBED"
+    );
   } catch (err) {
     console.error("❌ [sendDiscordTrackRecord ERROR]:", err);
   }
@@ -242,7 +246,9 @@ function generateFileName() {
 
 export function sendDiscordReplay(replay: Uint8Array) {
   try {
-    const REPLAYS_URL = LEAGUE_MODE ? /*LEAGUE_REPLAY_URL*/ LEAGUE_REPLAY_URL_FH : PUBLIC_REPLAY_URL;
+    const REPLAYS_URL = LEAGUE_MODE
+      ? /*LEAGUE_REPLAY_URL*/ LEAGUE_REPLAY_URL_FH
+      : PUBLIC_REPLAY_URL;
 
     const buffer = Buffer.from(replay);
     const blob = new Blob([new Uint8Array(buffer)], {
@@ -273,7 +279,11 @@ export function sendDiscordGeneralChatQualy(message: string) {
 
 export function sendDiscordCutTrack(message: string) {
   try {
-    safeSend(/*CUT_TRACK_URL*/ CUT_TRACK_URL_FH, { content: message }, "CUT_TRACK_DETECTOR");
+    safeSend(
+      /*CUT_TRACK_URL*/ CUT_TRACK_URL_FH,
+      { content: message },
+      "CUT_TRACK_DETECTOR"
+    );
   } catch (err) {
     console.error("❌ [sendDiscordCutTrack ERROR]:", err);
   }

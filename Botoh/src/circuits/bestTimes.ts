@@ -28,7 +28,7 @@ const trackNameMapping: { [key: string]: string } = {
   fuji: "Fuji International - By Ximb",
   hungaroing: "Hungaroring - By Ximb",
   mexico: "Mexico City - Autodromo Hermanos Rodriquez By Ximb",
-  austria: "Redbull Ring MGP by Rodri",
+  austria: "Redbull Ring by Rodri",
   laguna_seca: "Laguna Seca by Rodri",
   balaton: "Balaton Park by Rodri",
   nurburgringNano: "Nurburgring GP By Nanoseb",
@@ -53,7 +53,7 @@ const trackNameMapping: { [key: string]: string } = {
 
 export const bestTimes: { [key: string]: [number, string, string] } = {
   melbourne: [27.6, "Lando Canorris", trackNameMapping["melbourne"]],
-  imola: [31.867, "Lib Wallard", trackNameMapping["imola"]],
+  imola: [39.967, "Ximbastian Vettel", trackNameMapping["imola"]],
   sepang: [49.65, "Lib Wallard ", trackNameMapping["sepang"]],
   bahrein: [32.884, "Alberto Ulasscari", trackNameMapping["bahrein"]],
   sochi: [40.15, "Alberto Ulasscari", trackNameMapping["sochi"]],

@@ -403,7 +403,7 @@ export const MESSAGES = {
     }),
   }),
 
-    WEC_TIME: (minutes: number): LocalizedMessageFunction => ({
+  WEC_TIME: (minutes: number): LocalizedMessageFunction => ({
     en: replaceTemplateString(en_messages.WEC_TIME, {
       minutes: minutes.toString(),
     }),
@@ -429,7 +429,7 @@ export const MESSAGES = {
     pt: pt_messages.NOT_IN_QUALI,
   }),
 
-    NOT_IN_RACE: (): LocalizedMessageFunction => ({
+  NOT_IN_RACE: (): LocalizedMessageFunction => ({
     en: en_messages.NOT_IN_RACE,
     es: es_messages.NOT_IN_RACE,
     fr: fr_messages.NOT_IN_RACE,
@@ -1761,5 +1761,11 @@ export const MESSAGES = {
       raceTime: raceTime.toString(),
     }),
   }),
+  SOFT_CUT_PENALTY: (): LocalizedMessageFunction => ({
+    en: replaceTemplateString(en_messages.SOFT_CUT_PENALTY, {}),
+    es: replaceTemplateString(es_messages.SOFT_CUT_PENALTY, {}),
+    fr: replaceTemplateString(fr_messages.SOFT_CUT_PENALTY, {}),
+    tr: replaceTemplateString(tr_messages.SOFT_CUT_PENALTY, {}),
+    pt: replaceTemplateString(pt_messages.SOFT_CUT_PENALTY, {}),
+  }),
 };
-
