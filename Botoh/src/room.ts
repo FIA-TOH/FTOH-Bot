@@ -23,17 +23,11 @@ import { PlayerChat } from "./features/roomFeatures/playerChat";
 import { GameStop } from "./features/roomFeatures/gameStop";
 import { PlaerActivity } from "./features/roomFeatures/playerActivitie";
 import { log } from "./features/discord/logger";
+import { startStandingsServer } from "./features/web/standingsServer";
 
 const envName = process.env.LEAGUE_ENV || "ftoh";
 const roomName = LEAGUE_MODE
-  ? /**? envName === "haxbula"
-    ? haxbulaLeagueName
-    : leagueName
-  : envName === "haxbula"
-    ? haxbulaPublicName
-    : publicName
-  */
-    envName === "fh"
+  ? envName === "fh"
     ? formulaHaxballLeagueName
     : leagueName
   : envName === "fh"
@@ -110,3 +104,6 @@ export const roomPromise: Promise<any> = HaxballJS().then((HBInit: any) => {
 export async function getRoom() {
   return await roomPromise;
 }
+
+// Start standings HTTP server after room is created
+startStandingsServer();

@@ -26,16 +26,24 @@ export function PlayerLeave(room: RoomObject) {
     if (player.admin) delete afkAdmins[player.id];
     updatePlayerActivity(player);
 
+    // Guard: check if player exists in playerList
     const playerObj = playerList[player.id];
-    const firstPlacePlayer = getPlayerByRacePosition("first", room);
-    const firstPlacePlayerLap = firstPlacePlayer
-      ? playerList[firstPlacePlayer.id].currentLap
-      : 0;
+    if (!playerObj) {
+      console.warn(`Player ${player.id} (${player.name}) left but not found in playerList`);
+      log(`${player.name} has left.`);
+      return;
+    }
 
-    const lapsCompleted = Math.max(0, playerList[player.id].currentLap - 1);
+    const firstPlacePlayer = getPlayerByRacePosition("first", room);
+    const firstPlacePlayerLap =
+      firstPlacePlayer && playerList[firstPlacePlayer.id]
+        ? playerList[firstPlacePlayer.id].currentLap
+        : 0;
+
+    const lapsCompleted = Math.max(0, playerObj.currentLap - 1);
 
     if (LEAGUE_MODE) {
-      const hash = playerObj !== undefined ? sha256(playerObj.ip) : "";
+      const hash = sha256(playerObj.ip);
       log(`${player.name} has left. (${hash})`);
       if (gameMode === GameMode.HARD_QUALY && player.name !== "Admin") {
         sendDiscordGeneralChatQualy(`${player.name} has left the qualy room!`);
@@ -75,22 +83,13 @@ export function PlayerLeave(room: RoomObject) {
             firstPlacePlayerLap - playerObj.currentLap
           ),
           lapsCompletedWhenLeft: lapsCompleted,
-
           leftAt: new Date().toISOString(),
         };
-        // console.log(
-        //   "LEFT SAVE",
-        //   player.name,
-        //   "lapsCompletedWhenLeft",
-        //   lapsCompleted,
-        //   "lapsBehind",
-        //   playerObj.currentLap - firstPlacePlayerLap
-        // );
 
         addPlayerLeftInfo(playerLeft);
       }
     } else {
-      const ip = playerObj !== undefined ? playerObj.ip : "";
+      const ip = playerObj.ip;
       log(`${player.name} has left. (${ip})`);
       checkRunningPlayers(room);
     }
@@ -103,6 +102,7 @@ export function PlayerLeave(room: RoomObject) {
         }
       }
     }
+
     if (gameMode === GameMode.HARD_QUALY) {
       if (room.getPlayerList().length <= 1) {
         room.setPassword(null);
@@ -111,7 +111,9 @@ export function PlayerLeave(room: RoomObject) {
 
       sendQualiResultsToDiscord();
     }
+
     if (player.id === followPlayerId && playerObj?.cameraFollowing) {
+      // player was being followed, handle appropriately
     } else {
       const playersAndDiscs = getPlayerAndDiscs(room);
       if (

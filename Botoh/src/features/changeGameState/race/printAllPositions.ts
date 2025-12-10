@@ -14,6 +14,7 @@ import {
   GeneralGameMode,
 } from "../changeGameModes";
 import { positionList } from "./positionList";
+import { saveStandingsHtml } from "./standingsHtml";
 
 const HAXBALL_MSG_LIMIT = 124;
 
@@ -82,4 +83,6 @@ export function printAllPositions(
   if (messageBuffer.length > 0) {
     sendNonLocalizedSmallChatMessage(room, messageBuffer, toPlayerID);
   }
+  // Save standings HTML when positionList updates
+  saveStandingsHtml();
 }
