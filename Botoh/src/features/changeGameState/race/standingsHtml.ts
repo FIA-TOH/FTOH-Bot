@@ -28,7 +28,7 @@ export function generateStandingsHtml(): string {
     pits: p.pits,
     bestLap: p.time,
     laps: playerList[p.id]?.currentLap ?? 0,
-    gap: idx === 0 ? "—" : `+${(p.time - positionList[0].time).toFixed(3)}s`,
+    gap: idx === 0 ? "+0.00" : `+${(p.time - positionList[0].time).toFixed(3)}s`,
   }));
 
   const timestamp = new Date().toLocaleString();
@@ -40,128 +40,118 @@ export function generateStandingsHtml(): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Race Standings</title>
   <style>
+    /* Compact scoreboard style */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: "Monaco", "Courier New", monospace;
-      background: #1a1a1a;
+      font-family: "Tomorrow", "Arial", sans-serif;
+      background: #0f0f10;
       color: #fff;
-      padding: 20px;
+      padding: 8px;
     }
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
+      width: 360px;
+      margin: 6px auto;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 32px;
+    .score-header {
+      background: #1e0e0e;
+      color: #ff3b30;
+      padding: 8px 10px;
+      border-radius: 6px 6px 0 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
     }
     .timestamp {
       text-align: center;
-      font-size: 12px;
-      color: #888;
-      margin-bottom: 20px;
+      font-size: 10px;
+      color: #bdbdbd;
+      margin: 6px 0 8px 0;
     }
     table {
       width: 100%;
-      border-collapse: collapse;
-      background: #2a2a2a;
-      border: 1px solid #444;
+      border-collapse: separate;
+      border-spacing: 0 6px;
+      font-size: 12px;
     }
-    th {
-      background: #333;
-      padding: 12px;
-      text-align: left;
-      border-bottom: 2px solid #555;
-      font-weight: bold;
-      font-size: 14px;
-      color: #aaa;
+    thead th {
+      color: #ff3b30;
+      font-weight: 800;
+      font-size: 11px;
       text-transform: uppercase;
+      background: transparent;
+      padding: 4px 6px;
+      text-align: left;
+      letter-spacing: 1px;
     }
-    td {
-      padding: 10px 12px;
-      border-bottom: 1px solid #444;
-      font-size: 14px;
+    tbody tr {
+      color: #fff;
+      height: 28px;
+      display: table-row; /* preserve row layout */
     }
-    tr:hover {
-      background: #353535;
+    tbody td {
+      padding: 4px 6px;
+      vertical-align: middle;
+      background: #201818;
+      border-radius: 6px;
+      margin-bottom: 6px;
     }
+    /* make each cell look like a pill by using box-shadow to separate cells */
+    tbody td + td { margin-left: 6px; }
     .pos {
-      font-weight: bold;
-      color: #ffaa00;
-      width: 40px;
+      width: 36px;
+      color: #ff3b30;
+      font-weight: 800;
+      text-align: left;
+      padding-left: 8px;
     }
     .name {
-      min-width: 150px;
-      font-weight: 500;
-    }
-    .points {
-      font-weight: bold;
-      color: #0f0;
-      text-align: center;
-      width: 70px;
-    }
-    .wins {
-      text-align: center;
-      width: 60px;
-      color: #ff6b6b;
-    }
-    .pits {
-      text-align: center;
-      width: 60px;
-      color: #6b9eff;
-    }
-    .bestlap {
-      text-align: center;
-      width: 100px;
-      font-family: "Courier New", monospace;
-    }
-    .laps {
-      text-align: center;
-      width: 60px;
-      color: #ffff00;
-    }
-    .gap {
-      text-align: center;
-      width: 80px;
-      color: #888;
-    }
-    .info-box {
-      margin-top: 30px;
-      padding: 15px;
-      background: #2a2a2a;
-      border: 1px solid #444;
-      border-radius: 4px;
-    }
-    .info-row {
-      margin-bottom: 8px;
-      font-size: 13px;
-    }
-    .info-label {
-      color: #aaa;
-      font-weight: bold;
-      display: inline-block;
-      width: 120px;
-    }
-    .info-value {
+      text-transform: uppercase;
+      font-weight: 700;
+      width: 140px;
       color: #fff;
     }
+    .gap {
+      width: 60px;
+      color: #dcdcdc;
+      text-align: right;
+      font-weight: 700;
+    }
+    .laps {
+      width: 36px;
+      text-align: center;
+      color: #f2f2f2;
+    }
+    .pits {
+      width: 36px;
+      text-align: center;
+      color: #f2f2f2;
+    }
+    .info-box {
+      margin-top: 10px;
+      padding: 8px;
+      background: #151212;
+      border-radius: 6px;
+      font-size: 11px;
+      color: #cfcfcf;
+    }
+    .info-row { margin-bottom: 6px; }
+    .small { font-size: 11px; color: #bdbdbd; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>⚡ Race Standings ⚡</h1>
+    <div class="score-header">FORMULA HAXBALL RACE</div>
     <div class="timestamp">Last updated: ${timestamp}</div>
 
     <table>
       <thead>
         <tr>
-          <th class="pos">P</th>
-          <th class="name">Driver</th>
-          <th class="pits">Pits</th>
-          <th class="bestlap">Best Lap</th>
-          <th class="laps">Laps</th>
-          <th class="gap">Gap</th>
+          <th>P</th>
+          <th>NAME</th>
+          <th>GAP</th>
+          <th>LAPS</th>
+          <th>PITS</th>
         </tr>
       </thead>
       <tbody>
@@ -171,10 +161,9 @@ export function generateStandingsHtml(): string {
         <tr>
           <td class="pos">${r.position}</td>
           <td class="name">${escapeHtml(r.name)}</td>
-          <td class="pits">${r.pits}</td>
-          <td class="bestlap">${r.bestLap < 999.999 ? r.bestLap.toFixed(3) : "N/A"}</td>
-          <td class="laps">${r.laps}</td>
           <td class="gap">${r.gap}</td>
+          <td class="laps">${r.laps}</td>
+          <td class="pits">${r.pits}</td>
         </tr>
         `
           )
@@ -185,14 +174,14 @@ export function generateStandingsHtml(): string {
     <div class="info-box">
       ${
         bestLap
-          ? `<div class="info-row"><span class="info-label">⚡ Fastest Lap:</span> <span class="info-value">${escapeHtml(
+          ? `<div class="info-row"><span class="small">⚡ Fastest Lap:</span> <span>${escapeHtml(
               bestLap.playerName
             )} - ${bestLap.lapTime.toFixed(3)}s (Lap ${bestLap.lapNumber})</span></div>`
           : ""
       }
       ${
         bestPit
-          ? `<div class="info-row"><span class="info-label">🔧 Fastest Pit:</span> <span class="info-value">${escapeHtml(
+          ? `<div class="info-row"><span class="small">🔧 Fastest Pit:</span> <span>${escapeHtml(
               bestPit.playerName
             )} - ${bestPit.pitTime.toFixed(3)}s (Stop ${bestPit.pitNumber})</span></div>`
           : ""
@@ -203,15 +192,9 @@ export function generateStandingsHtml(): string {
   <script>
     (function() {
       try {
-        const evt = new EventSource("/events");
-        evt.onmessage = function(e) {
-          if (e.data === "update") {
-            location.reload();
-          }
-        };
-      } catch (err) {
-        // SSE not available — ignore
-      }
+        const evt = new EventSource('/events');
+        evt.onmessage = function(e) { if (e.data === 'update') location.reload(); };
+      } catch (err) { /* ignore */ }
     })();
   </script>
 </body>
@@ -252,5 +235,5 @@ function escapeHtml(text: string): string {
     '"': "&quot;",
     "'": "&#039;",
   };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
+  return String(text).replace(/[&<>\"']/g, (m) => map[m]);
 }
