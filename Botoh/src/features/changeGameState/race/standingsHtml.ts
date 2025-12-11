@@ -201,8 +201,18 @@ export function generateStandingsHtml(): string {
   </div>
 
   <script>
-    // Optional: auto-refresh every 3 seconds (comment out if you prefer manual refresh)
-    // setTimeout(() => location.reload(), 3000);
+    (function() {
+      try {
+        const evt = new EventSource("/events");
+        evt.onmessage = function(e) {
+          if (e.data === "update") {
+            location.reload();
+          }
+        };
+      } catch (err) {
+        // SSE not available — ignore
+      }
+    })();
   </script>
 </body>
 </html>
