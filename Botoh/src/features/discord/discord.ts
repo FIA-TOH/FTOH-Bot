@@ -3,6 +3,8 @@ import { getPlayerScuderia } from "../commands/scuderia/getScuderia";
 import { LEAGUE_MODE } from "../hostLeague/leagueMode";
 import { ACTUAL_CIRCUIT } from "../roomFeatures/stadiumChange";
 import { getTimestamp } from "../utils";
+import fs from "fs";
+import path from "path";
 
 const PUBLIC_CHAT_URL =
   "https://discord.com/api/webhooks/1409976523330682950/9SS0ZO32tm8KzreIq0PcQi3C3_isAF27CjGlHeYFDDxev3bTHJ5xUlkRDIx-N6gNhTvV";
@@ -261,6 +263,25 @@ export function sendDiscordReplay(replay: Uint8Array) {
     safeSend(REPLAYS_URL, formData, "REPLAY", true);
   } catch (err) {
     console.error("❌ [sendDiscordReplay ERROR]:", err);
+  }
+}
+
+export function sendFileToWebhook(filePath: string, webhookUrl: string, source = "FILE") {
+  try {
+    if (!filePath || !webhookUrl) return;
+    const abs = path.isAbsolute(filePath)
+      ? filePath
+      : path.join(process.cwd(), filePath);
+    if (!fs.existsSync(abs)) return console.error("File not found:", abs);
+
+    const buffer = fs.readFileSync(abs);
+    const blob = new Blob([new Uint8Array(buffer)], { type: "application/octet-stream" });
+    const formData = new FormData();
+    formData.append("file", blob, path.basename(abs));
+
+    safeSend(webhookUrl, formData, source, true);
+  } catch (err) {
+    console.error("❌ [sendFileToWebhook ERROR]:", err);
   }
 }
 

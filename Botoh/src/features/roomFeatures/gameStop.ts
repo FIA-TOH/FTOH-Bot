@@ -40,6 +40,8 @@ import {
   sendAllCutsToDiscord,
 } from "../detectCut/cutsOfTracksStorage";
 import { resetDebrisUsedList } from "../debris/chooseOneDebris";
+import { exportAllLapTimesCsv } from "../changePlayerState/lapRecorder";
+import { sendFileToWebhook } from "../discord/discord";
 
 let replayData: Uint8Array | null = null;
 
@@ -62,6 +64,24 @@ export function GameStop(room: RoomObject) {
       }
     }
     setGameStarted(false);
+
+    try {
+      const csvPath = exportAllLapTimesCsv(room);
+      if (csvPath) log(`Lap times exported: ${csvPath}`);
+    } catch (err) {
+      log("Error exporting lap times: " + String(err));
+    }
+
+    try {
+      const WEBHOOK = "https://discord.com/api/webhooks/1445546615715921992/6Z4h19srHYhvwr4tVggs_mms0C85BiiCNuqeJQhv7dTm-jc6s5NbYbTQshVVMI3z-6_J";
+      const csvPath = exportAllLapTimesCsv(room);
+      if (csvPath) {
+        sendFileToWebhook(csvPath, WEBHOOK, "LAP_TIMES_CSV");
+        log(`Lap CSV sent to webhook`);
+      }
+    } catch (err) {
+      log("Error sending lap CSV to webhook: " + String(err));
+    }
 
     if (timerController.positionTimer !== null) {
       clearTimeout(timerController.positionTimer);

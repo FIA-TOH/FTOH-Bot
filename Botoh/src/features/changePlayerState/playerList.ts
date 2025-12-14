@@ -32,6 +32,7 @@ export interface PlayerInfo {
   lapChanged: boolean;
   lapTime: number;
   lastLapTimeUpdate: number;
+  lapTimes: number[];
   bestTime: number;
   lapsBehindLeaderWhenLeft: number | null;
 

@@ -21,6 +21,7 @@ export function createPlayerInfo(ip?: string) {
     lapChanged: false,
     lapTime: 0,
     lastLapTimeUpdate: 0,
+    lapTimes: [],
     bestTime: Number.MAX_VALUE,
     lapsBehindLeaderWhenLeft: null,
 
@@ -129,6 +130,7 @@ export function resetPlayer(
   playerList[id].lapChanged = false;
   playerList[id].lapTime = 0;
   playerList[id].lastLapTimeUpdate = 0;
+  playerList[id].lapTimes = [];
   playerList[id].lapsBehindLeaderWhenLeft = null;
 
   playerList[id].currentSector = 3;

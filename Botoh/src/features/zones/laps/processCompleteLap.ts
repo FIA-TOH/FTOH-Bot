@@ -29,6 +29,15 @@ export function processCompletedLap(
   handleDRS(playerData, room);
   const lapTime = getLapTime(playerData, hasSector);
 
+  // store lap time for later export
+  if (!playerData.lapTimes) playerData.lapTimes = [];
+  playerData.lapTimes.push(lapTime);
+  try {
+    // also add to global lap store to ensure export availability
+    const { addLapToStore } = require("../../changePlayerState/lapRecorder");
+    if (typeof addLapToStore === "function") addLapToStore(p.id, p.name, lapTime);
+  } catch (err) {}
+
   const abbreviatedTrackName = getAbbreviatedTrackName(
     ACTUAL_CIRCUIT.info.name
   );
