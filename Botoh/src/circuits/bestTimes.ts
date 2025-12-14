@@ -50,6 +50,9 @@ const trackNameMapping: { [key: string]: string } = {
   bahrain_clic: "FH Bahrain by Cliquot",
   imola_old: "Enzo and Dino Ferrari International Circuit 1994 (Imola 1994) By Nanoseb",
   indianapolis_road: "Indianapolis Motor Speedway By Nanoseb",
+  bmw_ring: "BMW Ring By Nanoseb",
+  hungary_nano: "Hungaroring By Nanoseb",
+  spaNano: "Circuit de Spa-Francorchamps By Nanoseb",
 };
 
 export const bestTimes: { [key: string]: [number, string, string] } = {
@@ -109,6 +112,9 @@ export const bestTimes: { [key: string]: [number, string, string] } = {
   bahrain_clic: [999.99, "undefined", "FH Bahrain by Cliquot"],
   imola_old: [999.99, "undefined", "Enzo and Dino Ferrari International Circuit 1994 (Imola 1994) By Nanoseb"],
   indianapolis_road: [999.99, "undefined", "Indianapolis Motor Speedway By Nanoseb"],
+  bmw_ring: [999.99, "undefined", "BMW Ring By Nanoseb"],
+  hungary_nano: [999.99, "undefined", "Hungaroring By Nanoseb"],
+  spaNano: [999.99, "undefined", "Circuit de Spa-Francorchamps By Nanoseb"],
 };
 export const getAbbreviatedTrackName = (
   fullTrackName: string

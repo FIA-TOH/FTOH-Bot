@@ -39,7 +39,6 @@ import { BALATON } from "../../circuits/balaton/balaton";
 import { MIAMI } from "../../circuits/miami/miami";
 
 import { NURBURGRINGNANO } from "../../circuits/nurburgring/nurburgringNano";
-import { HUNGARYNANO } from "../../circuits/hungary/hungaryNano";
 
 import { INDIANAPOLIS } from "../../circuits/indianapolis/indianapolis";
 import { INDIANAPOLISLEAGUE } from "../../circuits/indianapolis/indianapolisLeague";
@@ -90,7 +89,9 @@ import { INTERLAGOS_NANOSEB } from "../../circuits/interlagos_nanoseb/interlagos
 import { BAHRAIN_CLIC } from "../../circuits/bahrain_clic/bahrain_clic";
 import { IMOLA_OLD } from "../../circuits/imola_old/imola_old";
 import { INDIANAPOLIS_ROAD } from "../../circuits/indianapolis_road/indianapolis_road";
-
+import { BMW_RING } from "../../circuits/bmw_ring/bmw_ring";
+import { HUNGARY_NANO } from "../../circuits/hungary_nano/hungary_nano";
+import { SPANANO } from "../../circuits/spa/spaNano";
 // import {DAYTONA} from "../circuits/daytona/daytona";
 // import {BARCELONA} from "../circuits/barcelona/barcelona";
 // import {MACAU} from "../circuits/macau/macau";
@@ -133,7 +134,6 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       MEXICO,
       MIAMI,
       NURBURGRINGNANO,
-      HUNGARYNANO,
       LAS_VEGAS,
       INTERLAGOSLEAGUE,
       ZANDVOORT,
@@ -152,6 +152,9 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       IMOLA_OLD,
       INDIANAPOLIS,
       INDIANAPOLIS_ROAD,
+      BMW_RING,
+      HUNGARY_NANO,
+      SPANANO,
       PODIUM,
       WAITROOM,
     ]
@@ -193,6 +196,19 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       JARAMA,
       BRANDS_HATCH,
       BARCELONA,
+      CANADA_NANO,
+      AUTODROMO_NANOSEB,
+      DUBAI,
+      GRECIA,
+      MONACO_NANO,
+      INTERLAGOS_NANOSEB,
+      BAHRAIN_CLIC,
+      IMOLA_OLD,
+      INDIANAPOLIS,
+      INDIANAPOLIS_ROAD,
+      BMW_RING,
+      HUNGARY_NANO,
+      SPANANO,
       WAITROOM,
       WAITROOMQUALY,
     ];
