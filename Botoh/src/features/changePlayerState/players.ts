@@ -71,6 +71,7 @@ export function createPlayerInfo(ip?: string) {
     gas: 100,
     prevGas: 100,
     slipstreamEndTime: undefined,
+    finalSlipstream: 0,
 
     // Penalidades e alertas
     penaltyCounter: 0,
@@ -168,6 +169,7 @@ export function resetPlayer(
   playerList[id].gas = 100;
   playerList[id].prevGas = 100;
   playerList[id].slipstreamEndTime = undefined;
+  playerList[id].finalSlipstream = 0;
   playerList[id].blowAtWear = 100;
   playerList[id].warningAtWear = null;
   playerList[id].warningIsFalse = false;
