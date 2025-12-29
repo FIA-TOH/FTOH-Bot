@@ -2,7 +2,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 const grecia_raw = readFileSync(join(__dirname, "grecia.hbs"), "utf-8");
 const grecia_json = JSON.parse(grecia_raw);
@@ -90,6 +90,7 @@ const GRECIA_INFO: CircuitInfo = {
   Angle: 60,
   Limit: 5,
   Votes: 0,
+  physicsType: CircuitPhysics.CLASSIC,
 };
 
 export const GRECIA: Circuit = {

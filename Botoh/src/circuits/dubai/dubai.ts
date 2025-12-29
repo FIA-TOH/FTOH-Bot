@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 const dubai_raw = readFileSync(join(__dirname, "dubai.hbs"), "utf-8");
 const dubai_json = JSON.parse(dubai_raw);
@@ -99,6 +99,7 @@ const DUBAI_INFO: CircuitInfo = {
   Angle: 90,
   Limit: 5,
   Votes: 0,
+  physicsType: CircuitPhysics.FH_NEWGEN,
   CutDetectSegments: 
 [
   {

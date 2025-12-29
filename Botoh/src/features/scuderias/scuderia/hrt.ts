@@ -8,17 +8,17 @@ import { Suspension } from "../tyres";
 
 export const HRTEngine: Engine = {
   name: "HRT Engine",
-  initialAccelerationNerf: 40,
-  medialAccelerationNerf: 40,
-  finalAccelerationNerf: 40,
-  topSpeedBoostNerf: 0,
+  initialAccelerationNerf: 107,
+  medialAccelerationNerf: 38,
+  finalAccelerationNerf: 74,
+  topSpeedBoostNerf: 6,
   confiability: 100,
 };
 
 export const HRTChassis: Chassis = {
   name: "HRT Chassis",
-  accelerationNerf: 120,
-  slipstreamNerf: 10,
+  accelerationNerf: 0,
+  slipstreamNerf: 50,
   dirtyAirBoost: 0,
   confiability: 100,
 };

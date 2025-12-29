@@ -8,17 +8,17 @@ import { Suspension } from "../tyres";
 
 export const HispalisEngine: Engine = {
   name: "Hispalis Engine",
-  initialAccelerationNerf: 40,
-  medialAccelerationNerf: 40,
-  finalAccelerationNerf: 40,
+  initialAccelerationNerf: 107,
+  medialAccelerationNerf: 38,
+  finalAccelerationNerf: 74,
   topSpeedBoostNerf: 0,
   confiability: 100,
 };
 
 export const HispalisChassis: Chassis = {
   name: "Hispalis Chassis",
-  accelerationNerf: 120,
-  slipstreamNerf: 10,
+  accelerationNerf: 0,
+  slipstreamNerf: 50,
   dirtyAirBoost: 0,
   confiability: 100,
 };

@@ -8,17 +8,17 @@ import { Suspension } from "../tyres";
 
 export const MclarenEngine: Engine = {
   name: "Mclaren Engine",
-  initialAccelerationNerf: 40,
+  initialAccelerationNerf: 112,
   medialAccelerationNerf: 40,
-  finalAccelerationNerf: 40,
-  topSpeedBoostNerf: 0,
+  finalAccelerationNerf: 80,
+  topSpeedBoostNerf: 15,
   confiability: 100,
 };
 
 export const MclarenChassis: Chassis = {
   name: "Mclaren Chassis",
-  accelerationNerf: 120,
-  slipstreamNerf: 10,
+  accelerationNerf: 0,
+  slipstreamNerf: 50,
   dirtyAirBoost: 0,
   confiability: 100,
 };

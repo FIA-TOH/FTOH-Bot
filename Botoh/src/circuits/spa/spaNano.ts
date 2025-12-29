@@ -1,5 +1,5 @@
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 import { readFileSync } from "fs";
 import { join } from "path";
@@ -91,6 +91,7 @@ const SPANANO_INFO: CircuitInfo = {
   Limit: 5,
   Votes: 0,
   pitSpeed: 0.97,
+  physicsType: CircuitPhysics.CLASSIC,
 };
 
 export const SPANANO: Circuit = {

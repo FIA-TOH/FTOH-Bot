@@ -8,17 +8,17 @@ import { Suspension } from "../tyres";
 
 export const CadillacEngine: Engine = {
   name: "Cadillac Engine",
-  initialAccelerationNerf: 40,
-  medialAccelerationNerf: 40,
-  finalAccelerationNerf: 40,
-  topSpeedBoostNerf: 0,
+  initialAccelerationNerf: 120,
+  medialAccelerationNerf: 36,
+  finalAccelerationNerf: 76,
+  topSpeedBoostNerf: 11,
   confiability: 100,
 };
 
 export const CadillacChassis: Chassis = {
   name: "Cadillac Chassis",
-  accelerationNerf: 120,
-  slipstreamNerf: 10,
+  accelerationNerf: 0,
+  slipstreamNerf: 40,
   dirtyAirBoost: 0,
   confiability: 100,
 };

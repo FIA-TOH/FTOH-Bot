@@ -8,17 +8,17 @@ import { Suspension } from "../tyres";
 
 export const PremaEngine: Engine = {
   name: "Prema Engine",
-  initialAccelerationNerf: 40,
+  initialAccelerationNerf: 120,
   medialAccelerationNerf: 40,
-  finalAccelerationNerf: 40,
-  topSpeedBoostNerf: 0,
+  finalAccelerationNerf: 74,
+  topSpeedBoostNerf: 15,
   confiability: 100,
 };
 
 export const PremaChassis: Chassis = {
   name: "Prema Chassis",
-  accelerationNerf: 120,
-  slipstreamNerf: 10,
+  accelerationNerf: 0,
+  slipstreamNerf: 28,
   dirtyAirBoost: 0,
   confiability: 100,
 };

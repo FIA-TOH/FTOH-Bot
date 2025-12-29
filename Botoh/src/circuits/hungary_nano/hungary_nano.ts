@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 
-import {Circuit, CircuitInfo, Direction} from "../Circuit";
+import {Circuit, CircuitInfo, CircuitPhysics, Direction} from "../Circuit";
 import { bestTimes } from "../bestTimes";
 
 const hungary_nano_raw = readFileSync(join(__dirname, "hungary_nano.hbs"), "utf-8");
@@ -91,6 +91,7 @@ const HUNGARY_NANO_INFO: CircuitInfo = {
     Angle: 90,
     Limit: 5,
     Votes: 0,
+    physicsType: CircuitPhysics.CLASSIC,
 }
 
 export const HUNGARY_NANO: Circuit = {

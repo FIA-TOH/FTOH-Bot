@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 const brands_hatch_raw = readFileSync(join(__dirname, "brands_hatch.hbs"), "utf-8");
 const brands_hatch_json = JSON.parse(brands_hatch_raw);
@@ -99,6 +99,7 @@ const BRANDS_HATCH_INFO: CircuitInfo = {
   Angle: 90,
   Limit: 5,
   Votes: 0,
+  physicsType: CircuitPhysics.FH_NEWGEN,
 };
 
 export const BRANDS_HATCH: Circuit = {

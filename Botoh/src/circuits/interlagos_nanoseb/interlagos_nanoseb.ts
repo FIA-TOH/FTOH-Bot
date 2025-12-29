@@ -2,7 +2,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 const interlagos_nanoseb_raw = readFileSync(
   join(__dirname, "interlagos_nanoseb.hbs"),
@@ -99,6 +99,7 @@ const INTERLAGOS_NANOSEB_INFO: CircuitInfo = {
   Angle: 90,
   Limit: 5,
   Votes: 0,
+  physicsType: CircuitPhysics.CLASSIC,
 };
 
 export const INTERLAGOS_NANOSEB: Circuit = {

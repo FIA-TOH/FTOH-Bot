@@ -8,17 +8,17 @@ import { Suspension } from "../tyres";
 
 export const FerrariEngine: Engine = {
   name: "Ferrari Engine",
-  initialAccelerationNerf: 40,
+  initialAccelerationNerf: 120,
   medialAccelerationNerf: 40,
-  finalAccelerationNerf: 40,
-  topSpeedBoostNerf: 0,
+  finalAccelerationNerf: 74,
+  topSpeedBoostNerf: 10,
   confiability: 100,
 };
 
 export const FerrariChassis: Chassis = {
   name: "Ferrari Chassis",
-  accelerationNerf: 120,
-  slipstreamNerf: 10,
+  accelerationNerf: 0,
+  slipstreamNerf: 46,
   dirtyAirBoost: 0,
   confiability: 100,
 };

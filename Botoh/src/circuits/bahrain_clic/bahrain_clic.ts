@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 import { bestTimes } from "../bestTimes";
 
 const bahrain_clic_raw = readFileSync(join(__dirname, "bahrain_clic.hbs"), "utf-8");
@@ -28,19 +28,19 @@ const BAHRAIN_CLIC_INFO: CircuitInfo = {
   },
   sectorTwo: {
     bounds: {
-      minX: -287,
-      maxX: -257,
-      minY: -1004,
-      maxY: -880,
+      minX: -381,
+      maxX: -501,
+      minY: -1135,
+      maxY: -1105,
     },
-    passingDirection: Direction.RIGHT,
+    passingDirection: Direction.DOWN,
   },
   sectorThree: {
     bounds: {
-      minX: 1255,
-      maxX: 1380,
-      minY: -1045,
-      maxY: -1015,
+      minX: 1150,
+      maxX: 1301,
+      minY: -782,
+      maxY: -752,
     },
     passingDirection: Direction.UP,
   },
@@ -55,11 +55,11 @@ const BAHRAIN_CLIC_INFO: CircuitInfo = {
     minX: 1477,
     maxX: 1507,
     minY: 832,
-    maxY: 928,
+    maxY: 896,
   },
   pitlaneEnd: {
-    minX: -74,
-    maxX: -44,
+    minX: -30,
+    maxX: 0,
     minY: 832,
     maxY: 896,
   },
@@ -90,6 +90,7 @@ const BAHRAIN_CLIC_INFO: CircuitInfo = {
   Angle: 0,
   Limit: 5,
   Votes: 0,
+  physicsType: CircuitPhysics.SEMINEWGEN,
 };
 export const BAHRAIN_CLIC: Circuit = {
   map: bahrain_clic_raw,

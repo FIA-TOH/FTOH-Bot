@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
-import {Circuit, CircuitInfo, Direction} from "../Circuit";
+import {Circuit, CircuitInfo, CircuitPhysics, Direction} from "../Circuit";
 
 const indianapolis_road_raw = readFileSync(join(__dirname, "indianapolis_road.hbs"), "utf-8");
 const indianapolis_road_json = JSON.parse(indianapolis_road_raw);
@@ -94,6 +94,7 @@ const INDIANAPOLIS_ROAD_INFO: CircuitInfo = {
     AvatarColor: 0xbc002d,
     Angle: 90,
     Votes: 0,
+    physicsType: CircuitPhysics.FH_NEWGEN,
 CutDetectSegments: 
 [
   {

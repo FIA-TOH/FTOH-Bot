@@ -8,17 +8,17 @@ import { Suspension } from "../tyres";
 
 export const BmwMotorforceEngine: Engine = {
   name: "Bmw Motorforce Engine",
-  initialAccelerationNerf: 40,
-  medialAccelerationNerf: 40,
-  finalAccelerationNerf: 40,
-  topSpeedBoostNerf: 0,
+  initialAccelerationNerf: 120,
+  medialAccelerationNerf: 36,
+  finalAccelerationNerf: 76,
+  topSpeedBoostNerf: 10,
   confiability: 100,
 };
 
 export const BmwMotorforceChassis: Chassis = {
   name: "Bmw Motorforce Chassis",
-  accelerationNerf: 120,
-  slipstreamNerf: 10,
+  accelerationNerf: 0,
+  slipstreamNerf: 50,
   dirtyAirBoost: 0,
   confiability: 100,
 };

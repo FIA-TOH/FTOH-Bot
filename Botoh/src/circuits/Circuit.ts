@@ -60,6 +60,8 @@ export enum CircuitPhysics {
   F1_NEWGEN = "f1_newgen",
   INDY = "indy",
   WEC_NEWGEN = "wec_newgen",
+  FH_NEWGEN = "fh_newgen",
+  GIGA_SPEED = "giga_speed",
   SEMINEWGEN = "seminewgen",
   RALLY = "rally",
 }

@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 const jarama_raw = readFileSync(join(__dirname, "jarama.hbs"), "utf-8");
 const jarama_json = JSON.parse(jarama_raw);
@@ -99,6 +99,7 @@ const JARAMA_INFO: CircuitInfo = {
   Angle: 90,
   Limit: 5,
   Votes: 0,
+  physicsType: CircuitPhysics.FH_NEWGEN,
 };
 
 export const JARAMA: Circuit = {

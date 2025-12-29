@@ -92,6 +92,7 @@ import { INDIANAPOLIS_ROAD } from "../../circuits/indianapolis_road/indianapolis
 import { BMW_RING } from "../../circuits/bmw_ring/bmw_ring";
 import { HUNGARY_NANO } from "../../circuits/hungary_nano/hungary_nano";
 import { SPANANO } from "../../circuits/spa/spaNano";
+import { CANO } from "../../circuits/cano/cano";
 // import {DAYTONA} from "../circuits/daytona/daytona";
 // import {BARCELONA} from "../circuits/barcelona/barcelona";
 // import {MACAU} from "../circuits/macau/macau";
@@ -155,6 +156,7 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       BMW_RING,
       HUNGARY_NANO,
       SPANANO,
+      CANO,
       PODIUM,
       WAITROOM,
     ]
@@ -209,6 +211,7 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
       BMW_RING,
       HUNGARY_NANO,
       SPANANO,
+      CANO,
       WAITROOM,
       WAITROOMQUALY,
     ];

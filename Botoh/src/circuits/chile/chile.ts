@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 
-import {Circuit, CircuitInfo, Direction} from "../Circuit";
+import {Circuit, CircuitInfo, CircuitPhysics, Direction} from "../Circuit";
 import { bestTimes } from "../bestTimes";
 
 const chile_raw = readFileSync(join(__dirname, "chile.hbs"), "utf-8");
@@ -64,6 +64,7 @@ const CHILE_INFO: CircuitInfo = {
     Angle: 90,
     Limit: 5,
     Votes: 0,
+    physicsType: CircuitPhysics.GIGA_SPEED,
 }
 
 export const CHILE: Circuit = {

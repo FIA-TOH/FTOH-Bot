@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 const autodromo_nanoseb_raw = readFileSync(join(__dirname, "autodromo_nanoseb.hbs"), "utf-8");
 const autodromo_nanoseb_json = JSON.parse(autodromo_nanoseb_raw);
@@ -111,6 +111,7 @@ const AUTODROMO_NANOSEB_INFO: CircuitInfo = {
   Angle: 90,
   Limit: 5, 
   Votes: 0,
+  physicsType: CircuitPhysics.GIGA_SPEED,
   CutDetectSegments: 
 [
   {

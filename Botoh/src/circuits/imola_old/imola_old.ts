@@ -1,5 +1,5 @@
 import { bestTimes } from "../bestTimes";
-import { Circuit, CircuitInfo, Direction } from "../Circuit";
+import { Circuit, CircuitInfo, CircuitPhysics, Direction } from "../Circuit";
 
 import { readFileSync } from "fs";
 import { join } from "path";
@@ -90,6 +90,7 @@ const IMOLA_OLD_INFO: CircuitInfo = {
   Angle: 0,
   Limit: 5,
   Votes: 0,
+  physicsType: CircuitPhysics.FH_NEWGEN,
 };
 
 export const IMOLA_OLD: Circuit = {
