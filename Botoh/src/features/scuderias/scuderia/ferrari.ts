@@ -11,7 +11,7 @@ export const FerrariEngine: Engine = {
   initialAccelerationNerf: 120,
   medialAccelerationNerf: 40,
   finalAccelerationNerf: 74,
-  topSpeedBoostNerf: 10,
+  topSpeedBoostNerf: 1.4,
   confiability: 100,
 };
 

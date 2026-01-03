@@ -11,7 +11,7 @@ export const BmwMotorforceEngine: Engine = {
   initialAccelerationNerf: 120,
   medialAccelerationNerf: 36,
   finalAccelerationNerf: 76,
-  topSpeedBoostNerf: 5,
+  topSpeedBoostNerf: 1.4,
   confiability: 100,
 };
 
