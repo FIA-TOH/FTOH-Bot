@@ -35,7 +35,9 @@ export function printAllPositions(
   const headerLeftSpaces = " ".repeat(Math.ceil(headerSpaces));
   const headerRightSpaces = " ".repeat(Math.trunc(headerSpaces));
 
-  let messageBuffer = ` P - ${headerLeftSpaces}Name${headerRightSpaces} | Pits | Best Lap\n`;
+  // add a small fixed-width TEAM column
+  const TEAM_WIDTH = 8;
+  let messageBuffer = ` P - ${headerLeftSpaces}Name${headerRightSpaces} | Team    | Pits | Best Lap\n`;
   let i = 1;
 
   positionList.forEach((p) => {
@@ -47,7 +49,11 @@ export function printAllPositions(
     const pits = p.pits.toString().padStart(2, "0");
     const time = p.time < 999.999 ? p.time.toFixed(3) : "N/A";
 
-    const line = `${position} - ${leftSpaces}${p.name}${rightSpaces} | ${pits} | ${time}\n`;
+    // format team into fixed width
+    const rawTeam = (p.team ?? "").toString();
+    const team = rawTeam.length > TEAM_WIDTH ? rawTeam.substring(0, TEAM_WIDTH) : rawTeam.padEnd(TEAM_WIDTH, " ");
+
+    const line = `${position} - ${leftSpaces}${p.name}${rightSpaces} | ${team} | ${pits} | ${time}\n`;
 
     if (messageBuffer.length + line.length > HAXBALL_MSG_LIMIT) {
       sendNonLocalizedSmallChatMessage(room, messageBuffer, toPlayerID);

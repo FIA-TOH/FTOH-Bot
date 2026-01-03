@@ -12,6 +12,7 @@ export interface StandingsRow {
   bestLap: number;
   laps: number;
   gap: string;
+  team: string | null;
 }
 
 /**
@@ -29,6 +30,7 @@ export function generateStandingsHtml(): string {
     bestLap: p.time,
     laps: playerList[p.id]?.currentLap ?? 0,
     gap: idx === 0 ? "+0.00" : `+${(p.time - positionList[0].time).toFixed(3)}s`,
+    team: p.team ?? null,
   }));
 
   const timestamp = new Date().toLocaleString();
@@ -108,8 +110,14 @@ export function generateStandingsHtml(): string {
     .name {
       text-transform: uppercase;
       font-weight: 700;
-      width: 140px;
+      width: 120px;
       color: #fff;
+    }
+    .team {
+      width: 80px;
+      text-transform: uppercase;
+      color: #cfcfcf;
+      font-weight: 700;
     }
     .gap {
       width: 60px;
@@ -149,6 +157,7 @@ export function generateStandingsHtml(): string {
         <tr>
           <th>P</th>
           <th>NAME</th>
+          <th>TEAM</th>
           <th>GAP</th>
           <th>LAPS</th>
           <th>PITS</th>
@@ -161,6 +170,7 @@ export function generateStandingsHtml(): string {
         <tr>
           <td class="pos">${r.position}</td>
           <td class="name">${escapeHtml(r.name)}</td>
+          <td class="team">${escapeHtml(r.team ?? "")}</td>
           <td class="gap">${r.gap}</td>
           <td class="laps">${r.laps}</td>
           <td class="pits">${r.pits}</td>
