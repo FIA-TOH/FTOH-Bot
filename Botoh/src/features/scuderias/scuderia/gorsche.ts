@@ -11,7 +11,7 @@ export const GorscheEngine: Engine = {
   initialAccelerationNerf: 120,
   medialAccelerationNerf: 36,
   finalAccelerationNerf: 68,
-  topSpeedBoostNerf: 10,
+  topSpeedBoostNerf: 5,
   confiability: 100,
 };
 

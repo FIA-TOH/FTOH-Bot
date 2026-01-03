@@ -11,7 +11,7 @@ export const MclarenEngine: Engine = {
   initialAccelerationNerf: 112,
   medialAccelerationNerf: 40,
   finalAccelerationNerf: 80,
-  topSpeedBoostNerf: 15,
+  topSpeedBoostNerf: 7.5,
   confiability: 100,
 };
 

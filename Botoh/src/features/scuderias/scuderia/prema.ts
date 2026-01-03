@@ -11,7 +11,7 @@ export const PremaEngine: Engine = {
   initialAccelerationNerf: 120,
   medialAccelerationNerf: 40,
   finalAccelerationNerf: 74,
-  topSpeedBoostNerf: 15,
+  topSpeedBoostNerf: 6,
   confiability: 100,
 };
 
