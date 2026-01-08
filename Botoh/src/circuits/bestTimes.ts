@@ -110,7 +110,7 @@ export const bestTimes: { [key: string]: [number, string, string] } = {
   grecia: [64.681, "Ximbastian Vettel", "Autodromo Grecia By Nanoseb"],
   monaco_nano: [42.147, "Joninho", "Monaco Circuit By Nanoseb"],
   interlagos_nanoseb: [999.99, "undefined", "Autodromo Jose Carlos Pace By Nanoseb"],
-  bahrain_clic: [999.99, "undefined", "FH Bahrain by Cliquot"],
+  bahrain_clic: [48.567, "Cliquot", "FH Bahrain by Cliquot"],
   imola_old: [999.99, "undefined", "Enzo and Dino Ferrari International Circuit 1994 (Imola 1994) By Nanoseb"],
   indianapolis_road: [999.99, "undefined", "Indianapolis Motor Speedway By Nanoseb"],
   bmw_ring: [999.99, "undefined", "BMW Ring By Nanoseb"],

@@ -64,7 +64,7 @@ const CHILE_INFO: CircuitInfo = {
     Angle: 90,
     Limit: 5,
     Votes: 0,
-    physicsType: CircuitPhysics.GIGA_SPEED,
+    physicsType: CircuitPhysics.F1_NEWGEN,
 }
 
 export const CHILE: Circuit = {

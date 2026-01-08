@@ -28,8 +28,8 @@ const BAHRAIN_CLIC_INFO: CircuitInfo = {
   },
   sectorTwo: {
     bounds: {
-      minX: -381,
-      maxX: -501,
+      minX: -501,
+      maxX: -381,
       minY: -1135,
       maxY: -1105,
     },
