@@ -55,7 +55,7 @@ const BAHRAIN_CLIC_INFO: CircuitInfo = {
     minX: 1477,
     maxX: 1507,
     minY: 832,
-    maxY: 896,
+    maxY: 906,
   },
   pitlaneEnd: {
     minX: -30,
