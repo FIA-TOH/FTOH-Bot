@@ -32,4 +32,5 @@ export enum ScuderiaColors {
   MEISE = 0x8533ff,
   GENSKE = 0x6B1212,
   YAMAHA = 0xf9f9f9,
+  FORMULA2 = 0X272EF5,
 }
