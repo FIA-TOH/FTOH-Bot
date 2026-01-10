@@ -21,6 +21,7 @@ import { Hispalis } from "./scuderia/hispalis";
 import { Meise } from "./scuderia/meise";
 import { Genske } from "./scuderia/genske";
 import { Yamaha } from "./scuderia/yamaha";
+import { Formula2 } from "./scuderia/f2";
 
 export interface leagueScuderia {
   name: string;
@@ -132,4 +133,5 @@ export const leagueScuderia: { [key: string]: leagueScuderia } = {
   Meise,
   Genske,
   Yamaha,
+  Formula2,
 };
