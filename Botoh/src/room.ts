@@ -31,8 +31,8 @@ const roomName = LEAGUE_MODE
     ? formulaHaxballLeagueName
     : leagueName
   : envName === "fh"
-  ? formulaHaxballPublicName
-  : publicName;
+    ? formulaHaxballPublicName
+    : publicName;
 
 function getGeo() {
   const geoEnv = process.env.HAXBALL_GEO;
@@ -60,7 +60,7 @@ export const roomPromise: Promise<any> = HaxballJS().then((HBInit: any) => {
     maxPlayers: maxPlayers,
     password: roomPassword ?? undefined,
     token:
-      process.env.HAXBALL_TOKEN ?? "thr1.AAAAAGlLNQdPsmILZoivlw.lBHVp6-e9ew",
+      process.env.HAXBALL_TOKEN ?? "thr1.AAAAAGlizpZdNWDLuCLrqg.4G9ldvoViCs",
     geo: getGeo(),
   });
 
