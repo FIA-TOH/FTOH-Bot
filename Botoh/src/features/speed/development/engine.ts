@@ -22,7 +22,7 @@ function calcAccelerationGrip(
 
   let targetBoost = 0;
 
-  if (speed <= initialEnd) {
+/*  if (speed <= initialEnd) {
     room.setPlayerAvatar(playerId, "I");
     targetBoost = toDecimal(engine.initialAccelerationNerf);
   } else if (speed <= medialEnd) {
@@ -31,7 +31,7 @@ function calcAccelerationGrip(
   } else {
     room.setPlayerAvatar(playerId, "F");
     targetBoost = toDecimal(engine.finalAccelerationNerf);
-  }
+  }*/
 
   const prevBoost = smoothedBoostMap[playerId] ?? targetBoost;
 
