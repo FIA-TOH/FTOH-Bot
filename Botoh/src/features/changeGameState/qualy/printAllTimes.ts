@@ -13,8 +13,11 @@ import {
   generalGameMode,
 } from "../changeGameModes";
 import { getPlayersOrderedByQualiTime } from "./playerTime";
+import { leagueScuderia } from "../../scuderias/scuderias";
+import { playerList } from "../../changePlayerState/playerList";
 
 const HAXBALL_MSG_LIMIT = 124;
+const TEAM_COL_WIDTH = 12;
 
 export function printAllTimes(room: RoomObject, toPlayerID?: number) {
   if (generalGameMode === GeneralGameMode.GENERAL_RACE) {
@@ -29,17 +32,32 @@ export function printAllTimes(room: RoomObject, toPlayerID?: number) {
     return;
   }
 
-  let messageBuffer = ` P - ${centerText(
-    "Name",
-    MAX_PLAYER_NAME
-  )} | Best Lap\n`;
+  let messageBuffer =
+    ` P - ${centerText("Name", MAX_PLAYER_NAME)} | ${centerText(
+      "Team",
+      TEAM_COL_WIDTH
+    )} | Best Lap\n`;
 
   orderedList.forEach((p, index: number) => {
     const position = String(index + 1).padStart(2, "0");
     const nameCentered = centerText(p.name, MAX_PLAYER_NAME);
+
+    // Resolve team: prefer p.team (from quali list), fallback to playerList by id
+    const teamKey =
+      p.team ??
+      (typeof p.id === "number" ? playerList[p.id]?.leagueScuderia : null) ??
+      null;
+
+    let teamTag = "";
+    if (teamKey) {
+      const key = teamKey as keyof typeof leagueScuderia;
+      teamTag = leagueScuderia[key]?.tag ?? String(teamKey);
+    }
+
+    const teamCentered = centerText(teamTag, TEAM_COL_WIDTH);
     const displayedTime =
       p.time === Number.MAX_VALUE ? "N/A" : p.time.toFixed(3);
-    const line = `${position} - ${nameCentered} | ${displayedTime}\n`;
+    const line = `${position} - ${nameCentered} | ${teamCentered} | ${displayedTime}\n`;
 
     if (messageBuffer.length + line.length > HAXBALL_MSG_LIMIT) {
       sendNonLocalizedSmallChatMessage(room, messageBuffer, toPlayerID);
