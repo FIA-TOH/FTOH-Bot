@@ -10,8 +10,8 @@ const imola_old_json = JSON.parse(imola_old_raw);
 const IMOLA_OLD_INFO: CircuitInfo = {
   finishLine: {
     bounds: {
-      minX: -50,
-      maxX: -20,
+      minX: -165,
+      maxX: -135,
       minY: -130,
       maxY: 235,
     },
@@ -19,8 +19,8 @@ const IMOLA_OLD_INFO: CircuitInfo = {
   },
   sectorOne: {
     bounds: {
-      minX: -50,
-      maxX: -20,
+      minX: -165,
+      maxX: -135,
       minY: -130,
       maxY: 235,
     },
@@ -28,10 +28,10 @@ const IMOLA_OLD_INFO: CircuitInfo = {
   },
   sectorTwo: {
     bounds: {
-      minX: -2360,
-      maxX: -2390,
-      minY: 1940,
-      maxY: 2242,
+      minX: -2366,
+      maxX: -2336,
+      minY: 1932,
+      maxY: 2233,
     },
     passingDirection: Direction.LEFT,
   },
@@ -39,10 +39,10 @@ const IMOLA_OLD_INFO: CircuitInfo = {
     bounds: {
       minX: 165,
       maxX: 195,
-      minY: 800,
-      maxY: 1150,
+      minY: 1015,
+      maxY: 1285,
     },
-    passingDirection: Direction.LEFT,
+    passingDirection: Direction.RIGHT,
   },
   name: "Enzo and Dino Ferrari International Circuit 1994 (Imola 1994) By Nanoseb",
   boxLine: {
@@ -52,10 +52,10 @@ const IMOLA_OLD_INFO: CircuitInfo = {
     maxY: -75,
   },
   pitlaneStart: {
-    minX: 680,
-    maxX: 710,
-    minY: -230,
-    maxY: -125,
+    minX: 550,
+    maxX: 580,
+    minY: -75,
+    maxY: 2,
   },
   pitlaneEnd: {
     minX: -525,
