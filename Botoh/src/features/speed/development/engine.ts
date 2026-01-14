@@ -14,7 +14,7 @@ function calcAccelerationGrip(
   speed: number,
   engine: any,
   baseGrip: number,
-  room: RoomObject
+  room: RoomObject,
 ) {
   const maxSpeed = maxSpeedFromGrip(baseGrip);
   const initialEnd = maxSpeed * 0.5; // until 50%
@@ -22,16 +22,16 @@ function calcAccelerationGrip(
 
   let targetBoost = 0;
 
-/*  if (speed <= initialEnd) {
-    room.setPlayerAvatar(playerId, "I");
+  if (speed <= initialEnd) {
+    // room.setPlayerAvatar(playerId, "I");
     targetBoost = toDecimal(engine.initialAccelerationNerf);
   } else if (speed <= medialEnd) {
-    room.setPlayerAvatar(playerId, "M");
+    // room.setPlayerAvatar(playerId, "M");
     targetBoost = toDecimal(engine.medialAccelerationNerf);
   } else {
-    room.setPlayerAvatar(playerId, "F");
+    // room.setPlayerAvatar(playerId, "F");
     targetBoost = toDecimal(engine.finalAccelerationNerf);
-  }*/
+  }
 
   const prevBoost = smoothedBoostMap[playerId] ?? targetBoost;
 
@@ -56,7 +56,7 @@ function calcTopSpeedLimitGrip(
   grip: number,
   speed: number,
   topSpeedBoostNerf: number,
-  slipstream: number
+  slipstream: number,
 ) {
   const baseMaxSpeed = maxSpeedFromGrip(grip);
 
@@ -87,7 +87,7 @@ export function engineGripCalc(
   grip: number,
   playerDisc: DiscPropertiesObject,
   player: PlayerObject,
-  room: RoomObject
+  room: RoomObject,
 ) {
   if (!p.leagueScuderia) return grip;
 
@@ -103,14 +103,14 @@ export function engineGripCalc(
     speed,
     engine,
     grip,
-    room
+    room,
   );
 
   const finalGrip = calcTopSpeedLimitGrip(
     gripAfterAcceleration,
     speed,
     engine.topSpeedBoostNerf,
-    slip
+    slip,
   );
 
   return finalGrip;
