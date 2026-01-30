@@ -51,7 +51,7 @@ const BMW_RING_INFO: CircuitInfo = {
   },
   name: "BMW Ring By Nanoseb",
   boxLine: {
-    minX: -100,
+    minX: 0,
     maxX: 700,
     minY: -425,
     maxY: -370,
