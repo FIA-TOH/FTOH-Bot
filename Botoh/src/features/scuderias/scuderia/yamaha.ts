@@ -11,7 +11,7 @@ export const YamahaEngine: Engine = {
   initialAccelerationNerf: 112,
   medialAccelerationNerf: 40,
   finalAccelerationNerf: 80,
-  topSpeedBoostNerf: 2,
+  topSpeedBoostNerf: 1.4,
   confiability: 100,
 };
 

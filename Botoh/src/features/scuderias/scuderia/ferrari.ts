@@ -11,14 +11,14 @@ export const FerrariEngine: Engine = {
   initialAccelerationNerf: 120,
   medialAccelerationNerf: 40,
   finalAccelerationNerf: 74,
-  topSpeedBoostNerf: 1.4,
+  topSpeedBoostNerf: 1.32,
   confiability: 100,
 };
 
 export const FerrariChassis: Chassis = {
   name: "Ferrari Chassis",
   accelerationNerf: 0,
-  slipstreamNerf: 46,
+  slipstreamNerf: 36,
   dirtyAirBoost: 0,
   confiability: 100,
 };

@@ -11,7 +11,7 @@ export const CadillacEngine: Engine = {
   initialAccelerationNerf: 120,
   medialAccelerationNerf: 36,
   finalAccelerationNerf: 76,
-  topSpeedBoostNerf: 1.6,
+  topSpeedBoostNerf: 0.2,
   confiability: 100,
 };
 

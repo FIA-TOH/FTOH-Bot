@@ -18,7 +18,7 @@ export const PremaEngine: Engine = {
 export const PremaChassis: Chassis = {
   name: "Prema Chassis",
   accelerationNerf: 0,
-  slipstreamNerf: 28,
+  slipstreamNerf: 10,
   dirtyAirBoost: 0,
   confiability: 100,
 };
