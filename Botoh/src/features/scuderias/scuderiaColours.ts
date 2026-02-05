@@ -26,7 +26,7 @@ export enum ScuderiaColors {
   ALPINE = 0x2293d1,
   CADILLAC = 0xEBF527,
   PREMA = 0xff4545,
-  BMWMOTORFORCE = 0x06529d,
+  AUDI = 0x4F0707,
   MCLAREN = 0xff8700,
   HISPALIS = 0xff5733,
   MEISE = 0x8533ff,

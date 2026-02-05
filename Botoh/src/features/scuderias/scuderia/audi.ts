@@ -6,8 +6,8 @@ import { ScuderiaColors } from "../scuderiaColours";
 import { leagueScuderia } from "../scuderias";
 import { Suspension } from "../tyres";
 
-export const BmwMotorforceEngine: Engine = {
-  name: "Bmw Motorforce Engine",
+export const AudiEngine: Engine = {
+  name: "Audi Engine",
   initialAccelerationNerf: 120,
   medialAccelerationNerf: 36,
   finalAccelerationNerf: 76,
@@ -15,24 +15,24 @@ export const BmwMotorforceEngine: Engine = {
   confiability: 100,
 };
 
-export const BmwMotorforceChassis: Chassis = {
-  name: "Bmw Motorforce Chassis",
+export const AudiChassis: Chassis = {
+  name: "Audi Chassis",
   accelerationNerf: 0,
   slipstreamNerf: 50,
   dirtyAirBoost: 0,
   confiability: 100,
 };
 
-export const BmwMotorforceBatery: Batery = {
-  name: "Bmw Motorforce Batery",
+export const AudiBatery: Batery = {
+  name: "Audi Batery",
   ERSConsputionReduction: 0,
   ERSSpeedBoost: 0,
   ERSChargeBoost: 0,
   confiability: 100,
 };
 
-export const BmwMotorforceSuspension: Suspension = {
-  name: "Bmw Motorforce Suspension",
+export const AudiSuspension: Suspension = {
+  name: "Audi Suspension",
   tyreDurabilityBoost: 0,
   tyreSpeedDegradatedBoost: 0,
   peakTimeBoost: 0,
@@ -41,20 +41,20 @@ export const BmwMotorforceSuspension: Suspension = {
   confiability: 100,
 };
 
-export const BmwMotorforcePitCrew: PitCrew = {
-  name: "Bmw Motorforce Pit Crew",
+export const AudiPitCrew: PitCrew = {
+  name: "Audi Pit Crew",
   errorChanceReduction: 0,
   fastPitChanceBoost: 0,
   normalPitSpeedTimeBoost: 0,
 };
 
-export const BmwMotorforce : leagueScuderia = {
-  name: "Bmw Motorforce",
-  tag: "BMWM",
-  color: ScuderiaColors.BMWMOTORFORCE,
-  engine: BmwMotorforceEngine,
-  chassis: BmwMotorforceChassis,
-  batery: BmwMotorforceBatery,
-  suspension: BmwMotorforceSuspension,
-  pitCrew: BmwMotorforcePitCrew,
+export const Audi : leagueScuderia = {
+  name: "Audi",
+  tag: "AU",
+  color: ScuderiaColors.AUDI,
+  engine: AudiEngine,
+  chassis: AudiChassis,
+  batery: AudiBatery,
+  suspension: AudiSuspension,
+  pitCrew: AudiPitCrew,
 };

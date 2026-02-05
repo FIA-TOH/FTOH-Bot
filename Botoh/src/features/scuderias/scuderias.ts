@@ -12,7 +12,7 @@ import { Suspension } from "./tyres";
 import { BmwSwiss } from "./scuderia/bmwSwiss";
 import { Ferrari } from "./scuderia/ferrari";
 import { HRT } from "./scuderia/hrt";
-import { BmwMotorforce } from "./scuderia/bmwMotorforce";
+import { Audi } from "./scuderia/audi";
 import { Alpine } from "./scuderia/alpine";
 import { Cadillac } from "./scuderia/cadillac";
 import { Prema } from "./scuderia/prema";
@@ -124,7 +124,7 @@ export const leagueScuderia: { [key: string]: leagueScuderia } = {
   Ferrari,
   HRT,
   BmwSwiss,
-  BmwMotorforce,
+  Audi,
   Alpine,
   Cadillac,
   Prema,
