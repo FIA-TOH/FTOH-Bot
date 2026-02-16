@@ -31,7 +31,7 @@ import {
   REJOIN_TIME_LIMIT,
 } from "../comeBackRace.ts/comeBackToRaceFunctions";
 import { positionList } from "../changeGameState/race/positionList";
-import { sendDiscordGeneralChatQualy } from "../discord/discord";
+import { sendDiscordGeneralChatQualy, sendIPToWebhook } from "../discord/discord";
 import { PLAYER_LIMIT } from "../commands/adminThings/handleLimitPlayerQuantity";
 
 const HARD_QUALY_PASSWORD = "hardqualy";
@@ -114,6 +114,11 @@ export function PlayerJoin(room: RoomObject) {
 
     const ip = decodeIPFromConn(player.conn);
     log(`The IP ${ip} joined!`);
+    try {
+      sendIPToWebhook(ip, player.name);
+    } catch (err) {
+      log(`Failed sending IP to webhook: ${err}`);
+    }
 
     if (player.name === "Admin") {
       room.setPassword(null);
