@@ -18,6 +18,11 @@ type Direction = {
   y: number;
 };
 
+export type BestTimeWithTeam = {
+  team: string;
+  bestTimeSeconds: number;
+};
+
 export interface PlayerInfo {
   // Identificação e status de presença
   ip: string;
@@ -35,6 +40,7 @@ export interface PlayerInfo {
   lastLapTimeUpdate: number;
   lapTimes: number[];
   bestTime: number;
+  bestTimeWithTeam: BestTimeWithTeam[];
   lapsBehindLeaderWhenLeft: number | null;
 
   // Setores

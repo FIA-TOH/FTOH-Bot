@@ -13,6 +13,7 @@ import { sendDiscordTrackRecord } from "../../../discord/discord";
 import { ACTUAL_CIRCUIT } from "../../../roomFeatures/stadiumChange";
 import { serialize } from "../../../utils";
 import { broadcastLapTimeToPlayers } from "./annoucements/broadcastTimeToPlayer";
+import { updateBestTimeWithTeam } from "./handleBestTimeWithTeam";
 
 export function handleBestTimes(
   room: RoomObject,
@@ -23,6 +24,10 @@ export function handleBestTimes(
 ) {
   const playerData = playerList[p.id];
   const bestTimeP = serialize(playerData.bestTime);
+
+  if (playerData.lastLapValid) {
+    updateBestTimeWithTeam(playerData, lapTime);
+  }
 
   if (playerData.lastLapValid && lapTime < circuitBestTime) {
     updateBestTime(ACTUAL_CIRCUIT.info.name, lapTime, p.name);

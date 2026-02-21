@@ -5,7 +5,6 @@ import tr_messages from "../../locales/messages/tr.json";
 import pt_messages from "../../locales/messages/pt.json";
 import { playerList } from "../changePlayerState/playerList";
 import { DEFAULT_LANGUAGE, Language } from "./language";
-import { raceTime } from "../changeGameState/qualy/qualiMode";
 
 export function getPlayerLanguage(playerID: number): Language {
   if (playerID === null) return DEFAULT_LANGUAGE;

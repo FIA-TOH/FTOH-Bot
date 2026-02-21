@@ -24,6 +24,7 @@ export function createPlayerInfo(ip?: string) {
     lastLapTimeUpdate: 0,
     lapTimes: [],
     bestTime: Number.MAX_VALUE,
+    bestTimeWithTeam: [],
     lapsBehindLeaderWhenLeft: null,
 
     // Setores
@@ -125,6 +126,7 @@ export function resetPlayer(
   }
   if (startingRace) {
     playerList[id].bestTime = Number.MAX_VALUE;
+    playerList[id].bestTimeWithTeam = [];
     playerList[id].bestSectorTimes = [
       Number.MAX_VALUE,
       Number.MAX_VALUE,

@@ -1,17 +1,15 @@
 import {
-  gameMode,
-  GameMode,
   generalGameMode,
   GeneralGameMode,
 } from "../../../changeGameState/changeGameModes";
-import { setRaceTime } from "../../../changeGameState/qualy/qualiMode";
 import { sendErrorMessage } from "../../../chat/chat";
 import { MESSAGES } from "../../../chat/messages";
+import { setRaceTime } from "../qualy/qualiMode";
 
 export function handleWTimeCommand(
   byPlayer: PlayerObject,
   args: string[],
-  room: RoomObject
+  room: RoomObject,
 ) {
   if (!byPlayer.admin) {
     sendErrorMessage(room, MESSAGES.NON_EXISTENT_COMMAND(), byPlayer.id);

@@ -18,7 +18,8 @@ export function handleClearCommand(
   clearBestTime(ACTUAL_CIRCUIT.info.name, 999.999, "Limpado");
   const players = room.getPlayerList();
   players.forEach((p) => {
-    playerList[p.id].bestTime === 999.999;
+    playerList[p.id].bestTime = 999.999;
+    playerList[p.id].bestTimeWithTeam = [];
     playerList[p.id].bestSectorTimes = [
       Number.MAX_VALUE,
       Number.MAX_VALUE,

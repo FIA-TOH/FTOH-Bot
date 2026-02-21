@@ -30,6 +30,7 @@ export function handleClearTimeCommand(
 
   if (player) {
     playerList[player.id].bestTime = Number.MAX_VALUE;
+    playerList[player.id].bestTimeWithTeam = [];
     playerList[player.id].bestSectorTimes = [
       Number.MAX_VALUE,
       Number.MAX_VALUE,

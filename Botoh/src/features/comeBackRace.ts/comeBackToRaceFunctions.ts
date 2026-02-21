@@ -1,5 +1,5 @@
 import { handleAvatar, Situacions } from "../changePlayerState/handleAvatar";
-import { playerList } from "../changePlayerState/playerList";
+import { BestTimeWithTeam, playerList } from "../changePlayerState/playerList";
 import { sendMessage, sendSuccessMessage } from "../chat/chat";
 import { MESSAGES } from "../chat/messages";
 import { getPlayerAndDiscs } from "../playerFeatures/getPlayerAndDiscs";
@@ -18,6 +18,7 @@ export interface PlayerLeftInfo {
   didHardQualy: boolean;
   totalTime: number;
   bestTime: number;
+  bestTimeWithTeam: BestTimeWithTeam[];
   bestSectorTimes: [number, number, number];
   tires: Tires;
   wear: number;

@@ -36,6 +36,7 @@ export function updatePositionList(
       pitsInfo: playerData.pits,
       pits: playerData.pits.pitsNumber,
       time: playerData.bestTime,
+      timeWithTeam: playerData.bestTimeWithTeam,
       totalTime: playerData.totalTime,
       lap: playerData.currentLap,
       active: true,
