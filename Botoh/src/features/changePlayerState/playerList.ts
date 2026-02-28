@@ -1,3 +1,4 @@
+import { COLORS } from "../chat/chat";
 import { Language } from "../chat/language";
 import { PitStep } from "../tires&pits/pitMessaging";
 import { PitResult } from "../tires&pits/pitStopFunctions";
@@ -17,6 +18,11 @@ type Direction = {
   y: number;
 };
 
+export type BestTimeWithTeam = {
+  team: string;
+  bestTimeSeconds: number;
+};
+
 export interface PlayerInfo {
   // Identificação e status de presença
   ip: string;
@@ -34,6 +40,7 @@ export interface PlayerInfo {
   lastLapTimeUpdate: number;
   lapTimes: number[];
   bestTime: number;
+  bestTimeWithTeam: BestTimeWithTeam[];
   lapsBehindLeaderWhenLeft: number | null;
 
   // Setores
@@ -41,7 +48,8 @@ export interface PlayerInfo {
   sectorChanged: boolean;
   sectorTime: number[];
   sectorTimeCounter: number;
-
+  bestSectorTimes: [number, number, number];
+  sectorColour: COLORS;
   // Pneus
   tires: Tires;
   wear: number;

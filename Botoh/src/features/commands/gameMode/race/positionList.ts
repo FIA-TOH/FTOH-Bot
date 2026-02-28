@@ -1,4 +1,4 @@
-import { PitsInfo, playerList } from "../../changePlayerState/playerList";
+import { PitsInfo, playerList } from "../../../changePlayerState/playerList";
 
 export const positionList: {
   id: number;
@@ -15,7 +15,7 @@ export const positionList: {
 
 export function updatePositionList(
   players: { p: PlayerObject; disc: DiscPropertiesObject }[],
-  room: RoomObject
+  room: RoomObject,
 ) {
   // Cria um conjunto com os nomes dos jogadores atualmente ativos na sala
   const activePlayers = new Set(players.map((player) => player.p.name));
@@ -26,7 +26,7 @@ export function updatePositionList(
     const playerData = playerList[p.id];
 
     const playerPositionIndex = positionList.findIndex(
-      (entry) => entry.name === p.name
+      (entry) => entry.name === p.name,
     );
 
     // Monta o objeto com as informações atuais do jogador
@@ -36,6 +36,7 @@ export function updatePositionList(
       pitsInfo: playerData.pits,
       pits: playerData.pits.pitsNumber,
       time: playerData.bestTime,
+      timeWithTeam: playerData.bestTimeWithTeam,
       totalTime: playerData.totalTime,
       lap: playerData.currentLap,
       active: true,

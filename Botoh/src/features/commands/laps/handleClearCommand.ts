@@ -8,7 +8,7 @@ import { ACTUAL_CIRCUIT } from "../../roomFeatures/stadiumChange";
 export function handleClearCommand(
   byPlayer: PlayerObject,
   args: string[],
-  room: RoomObject
+  room: RoomObject,
 ) {
   if (!byPlayer.admin) {
     sendErrorMessage(room, MESSAGES.NON_EXISTENT_COMMAND(), byPlayer.id);
@@ -18,7 +18,13 @@ export function handleClearCommand(
   clearBestTime(ACTUAL_CIRCUIT.info.name, 999.999, "Limpado");
   const players = room.getPlayerList();
   players.forEach((p) => {
-    playerList[p.id].bestTime === 999.999;
+    playerList[p.id].bestTime = 999.999;
+    playerList[p.id].bestTimeWithTeam = [];
+    playerList[p.id].bestSectorTimes = [
+      Number.MAX_VALUE,
+      Number.MAX_VALUE,
+      Number.MAX_VALUE,
+    ];
   });
   log("Best record cleared by admin");
   room.sendAnnouncement("Record cleared");
