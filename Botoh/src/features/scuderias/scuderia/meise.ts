@@ -9,8 +9,8 @@ import { Suspension } from "../tyres";
 export const MeiseEngine: Engine = {
   name: "Meise Engine",
   initialAccelerationNerf: 107,
-  medialAccelerationNerf: 38,
-  finalAccelerationNerf: 74,
+  medialAccelerationNerf: 33,
+  finalAccelerationNerf: 68,
   topSpeedBoostNerf: 0.8,
   confiability: 100,
 };

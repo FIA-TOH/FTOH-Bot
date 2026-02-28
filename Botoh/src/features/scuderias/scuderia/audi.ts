@@ -9,8 +9,8 @@ import { Suspension } from "../tyres";
 export const AudiEngine: Engine = {
   name: "Audi Engine",
   initialAccelerationNerf: 120,
-  medialAccelerationNerf: 36,
-  finalAccelerationNerf: 76,
+  medialAccelerationNerf: 31,
+  finalAccelerationNerf: 64,
   topSpeedBoostNerf: 1,
   confiability: 100,
 };

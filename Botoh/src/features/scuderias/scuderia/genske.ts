@@ -9,8 +9,8 @@ import { Suspension } from "../tyres";
 export const GenskeEngine: Engine = {
   name: "Genske Engine",
   initialAccelerationNerf: 120,
-  medialAccelerationNerf: 36,
-  finalAccelerationNerf: 68,
+  medialAccelerationNerf: 30,
+  finalAccelerationNerf: 54,
   topSpeedBoostNerf: 0.2,
   confiability: 100,
 };

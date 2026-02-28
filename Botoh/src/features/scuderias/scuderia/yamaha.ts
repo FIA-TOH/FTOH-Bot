@@ -9,8 +9,8 @@ import { Suspension } from "../tyres";
 export const YamahaEngine: Engine = {
   name: "Yamaha Engine",
   initialAccelerationNerf: 112,
-  medialAccelerationNerf: 40,
-  finalAccelerationNerf: 80,
+  medialAccelerationNerf: 36,
+  finalAccelerationNerf: 72,
   topSpeedBoostNerf: 1.4,
   confiability: 100,
 };
