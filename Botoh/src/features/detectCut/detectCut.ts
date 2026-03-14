@@ -16,13 +16,13 @@ import { detectCutEnabled, softCutPenalty } from "./enableCutPenalty";
 
 const SEGMENT_CUT_COLOUR = "696969";
 const DEFAULT_PENALTY_PUBLIC = 5;
-const DEFAULT_PENALTY_LEAGUE = 2;
+const DEFAULT_PENALTY_LEAGUE = 0;
 
 function decidePenalty(seg: any) {
   const PENALTY =
     LEAGUE_MODE && generalGameMode === GeneralGameMode.GENERAL_RACE
       ? DEFAULT_PENALTY_LEAGUE
-      : seg.penalty ?? DEFAULT_PENALTY_PUBLIC;
+      : (seg.penalty ?? DEFAULT_PENALTY_PUBLIC);
 
   return PENALTY;
 }
@@ -42,7 +42,7 @@ export function loadCutSegmentsFromCircuit(circuit: Circuit) {
         penalty: decidePenalty(seg),
         v0: [seg.v0[0], seg.v0[1]],
         v1: [seg.v1[0], seg.v1[1]],
-      })
+      }),
     );
   }
 
@@ -70,7 +70,7 @@ function pointToSegmentDistance(
   x1: number,
   y1: number,
   x2: number,
-  y2: number
+  y2: number,
 ) {
   const A = px - x1;
   const B = py - y1;
@@ -100,7 +100,7 @@ function pointToSegmentDistance(
 
 export function detectCut(
   pad: { p: PlayerObject; disc: { x: number; y: number; radius: number } },
-  room: RoomObject
+  room: RoomObject,
 ) {
   if (!detectCutEnabled) return;
   if (!pad.disc) return;
@@ -117,27 +117,24 @@ export function detectCut(
       seg.v0[0],
       seg.v0[1],
       seg.v1[0],
-      seg.v1[1]
+      seg.v1[1],
     );
 
     if (dist < pad.disc.radius && !lastSet.has(seg.index)) {
       if (!softCutPenalty) {
-        let realPeanlty = decidePenalty(seg);
+        let realPenalty = decidePenalty(seg);
         if (
           room.getScores().time < 30 &&
           generalGameMode === GeneralGameMode.GENERAL_RACE
         ) {
-          realPeanlty = decidePenalty(seg) / 2;
+          realPenalty = 0;
         }
 
         log(`${pad.p.name} cutted the track at ${getTimestamp()}`);
-        sendAlertMessage(
-          room,
-          MESSAGES.CUTTED_TRACK(realPeanlty || 5),
-          pad.p.id
-        );
+        const penaltyToApply = realPenalty ?? DEFAULT_PENALTY_PUBLIC;
 
-        applyCutPenalty(pad, realPeanlty || 5, room);
+        sendAlertMessage(room, MESSAGES.CUTTED_TRACK(penaltyToApply), pad.p.id);
+        applyCutPenalty(pad, penaltyToApply, room);
       } else {
         sendAlertMessage(room, MESSAGES.SOFT_CUT_PENALTY(), pad.p.id);
       }
