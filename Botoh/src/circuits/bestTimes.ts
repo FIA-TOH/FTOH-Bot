@@ -1,4 +1,4 @@
-import { log } from "../features/discord/logger";
+import { log } from "../features/discord/logger";;
 
 const trackNameMapping: { [key: string]: string } = {
   melbourne: "Albert-Park Melbourne Circuit - By Ximb",
@@ -148,6 +148,7 @@ export const bestTimes: { [key: string]: [number, string, string] } = {
   hungary_nano: [999.99, "undefined", "Hungaroring By Nanoseb"],
   spaNano: [48.609, "BL", "Circuit de Spa-Francorchamps By Nanoseb"],
   baku_clic: [44.000, "Cliquot", "Baku - Clicquot"],
+  cano_sexcuit: [999.99, "undefined", "Cano Sexcuit by Rodri"],
 };
 export const getAbbreviatedTrackName = (
   fullTrackName: string,
