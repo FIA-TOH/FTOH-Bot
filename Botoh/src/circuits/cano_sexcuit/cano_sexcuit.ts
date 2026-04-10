@@ -83,7 +83,7 @@ const CANO_SEXCUIT_INFO: CircuitInfo = {
     x: cano_sexcuit_json.redSpawnPoints[cano_sexcuit_json.redSpawnPoints.length - 1][0],
     y: cano_sexcuit_json.redSpawnPoints[cano_sexcuit_json.redSpawnPoints.length - 1][1],
   },
-  BestTime: bestTimes.cano,
+  BestTime: bestTimes.cano_sexcuit,
   MainColor: [0x4415b0, 0x4e18c9, 0x571be0],
   AvatarColor: 0xffffff,
   Angle: 60,
