@@ -1,4 +1,4 @@
-import { afkKickTime, afkAlertTime } from "../../../roomconfig.json";
+﻿import { afkKickTime, afkAlertTime } from "../../../roomconfig.json";
 import {
   GameMode,
   gameMode,
@@ -24,76 +24,76 @@ export function afkKick(room: RoomObject) {
   const afkKickTimeMilisseconds = afkKickTime * 1000;
   const afkAlertTimeMilliseconds = afkAlertTime * 1000;
 
-  for (let id in activities) {
-    for (let i = 0; i < players.length; i++) {
-      const player = players[i];
-      const playerId = player.id;
-      const playerPropierties = playerList[playerId];
+  for (let i = 0; i < players.length; i++) {
+    const player = players[i];
+    const playerId = player.id;
+    const playerPropierties = playerList[playerId];
 
-      if (playerPropierties.inPitlane) {
-        return false;
-      }
-      const afkDuration = Date.now() - activities[playerId];
+    if (!(playerId in activities)) continue;
 
-      if (
-        room.getScores() != null &&
-        room.getScores().time > 0 &&
-        gameState === "running" &&
-        gameMode !== GameMode.WAITING &&
-        gameMode !== GameMode.TRAINING &&
-        generalGameMode !== GeneralGameMode.GENERAL_QUALY &&
-        player.team === Teams.RUNNERS
-      ) {
-        if (afkDuration > afkKickTimeMilisseconds) {
-          if (LEAGUE_MODE) {
-            if (!vsc && !presentationLap) {
-              handleVSCCommand(undefined, undefined, room);
-              if (ACTUAL_CIRCUIT.info.haveDebris && debrisEnabled) {
-                chooseOneDebris(room, playerId);
-              }
-              if (
-                ACTUAL_CIRCUIT.info.sectorOne &&
-                ACTUAL_CIRCUIT.info.sectorTwo &&
-                ACTUAL_CIRCUIT.info.sectorThree
-              ) {
-                sendAlertMessage(
-                  room,
-                  MESSAGES.WHO_IS_AFK_SECTORS(
-                    player.name,
-                    playerPropierties.currentSector
-                  )
-                );
-              } else {
-                sendAlertMessage(room, MESSAGES.WHO_IS_AFK(player.name));
-              }
+    if (playerPropierties.inPitlane) {
+      continue;
+    }
+    const afkDuration = Date.now() - activities[playerId];
+
+    if (
+      room.getScores() != null &&
+      room.getScores().time > 0 &&
+      gameState === "running" &&
+      gameMode !== GameMode.WAITING &&
+      gameMode !== GameMode.TRAINING &&
+      generalGameMode !== GeneralGameMode.GENERAL_QUALY &&
+      player.team === Teams.RUNNERS
+    ) {
+      if (afkDuration > afkKickTimeMilisseconds) {
+        if (LEAGUE_MODE) {
+          if (!vsc && !presentationLap) {
+            handleVSCCommand(undefined, undefined, room);
+            if (ACTUAL_CIRCUIT.info.haveDebris && debrisEnabled) {
+              chooseOneDebris(room, playerId);
+            }
+            if (
+              ACTUAL_CIRCUIT.info.sectorOne &&
+              ACTUAL_CIRCUIT.info.sectorTwo &&
+              ACTUAL_CIRCUIT.info.sectorThree
+            ) {
+              sendAlertMessage(
+                room,
+                MESSAGES.WHO_IS_AFK_SECTORS(
+                  player.name,
+                  playerPropierties.currentSector
+                )
+              );
             } else {
-              updatePlayerActivity(player);
-              if (
-                ACTUAL_CIRCUIT.info.sectorOne &&
-                ACTUAL_CIRCUIT.info.sectorTwo &&
-                ACTUAL_CIRCUIT.info.sectorThree
-              ) {
-                sendAlertMessage(
-                  room,
-                  MESSAGES.WHO_IS_AFK_SECTORS(
-                    player.name,
-                    playerPropierties.currentSector
-                  )
-                );
-              } else {
-                sendAlertMessage(room, MESSAGES.WHO_IS_AFK(player.name));
-              }
+              sendAlertMessage(room, MESSAGES.WHO_IS_AFK(player.name));
             }
           } else {
-            room.kickPlayer(playerId, "AFK", false);
+            updatePlayerActivity(player);
+            if (
+              ACTUAL_CIRCUIT.info.sectorOne &&
+              ACTUAL_CIRCUIT.info.sectorTwo &&
+              ACTUAL_CIRCUIT.info.sectorThree
+            ) {
+              sendAlertMessage(
+                room,
+                MESSAGES.WHO_IS_AFK_SECTORS(
+                  player.name,
+                  playerPropierties.currentSector
+                )
+              );
+            } else {
+              sendAlertMessage(room, MESSAGES.WHO_IS_AFK(player.name));
+            }
           }
-        } else if (
-          afkDuration > afkAlertTimeMilliseconds &&
-          !playerPropierties.afkAlert
-        ) {
-          sendAlertMessage(room, MESSAGES.AFK_MESSAGE(), playerId);
-          playerPropierties.afkAlert = true;
+        } else {
+          room.kickPlayer(playerId, "AFK", false);
         }
+      } else if (
+        afkDuration > afkAlertTimeMilliseconds &&
+        !playerPropierties.afkAlert
+      ) {
+        sendAlertMessage(room, MESSAGES.AFK_MESSAGE(), playerId);
+        playerPropierties.afkAlert = true;
       }
     }
   }
