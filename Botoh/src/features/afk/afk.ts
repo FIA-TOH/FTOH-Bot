@@ -27,11 +27,9 @@ export function afkKick(room: RoomObject) {
   for (let i = 0; i < players.length; i++) {
     const player = players[i];
     const playerId = player.id;
-    const playerPropierties = playerList[playerId];
+    const playerProperties = playerList[playerId];
 
-    if (!(playerId in activities)) continue;
-
-    if (playerPropierties.inPitlane) {
+    if (playerProperties.inPitlane) {
       continue;
     }
     const afkDuration = Date.now() - activities[playerId];
@@ -61,7 +59,7 @@ export function afkKick(room: RoomObject) {
                 room,
                 MESSAGES.WHO_IS_AFK_SECTORS(
                   player.name,
-                  playerPropierties.currentSector
+                  playerProperties.currentSector
                 )
               );
             } else {
@@ -78,7 +76,7 @@ export function afkKick(room: RoomObject) {
                 room,
                 MESSAGES.WHO_IS_AFK_SECTORS(
                   player.name,
-                  playerPropierties.currentSector
+                  playerProperties.currentSector
                 )
               );
             } else {
@@ -90,10 +88,10 @@ export function afkKick(room: RoomObject) {
         }
       } else if (
         afkDuration > afkAlertTimeMilliseconds &&
-        !playerPropierties.afkAlert
+        !playerProperties.afkAlert
       ) {
         sendAlertMessage(room, MESSAGES.AFK_MESSAGE(), playerId);
-        playerPropierties.afkAlert = true;
+        playerProperties.afkAlert = true;
       }
     }
   }
@@ -101,8 +99,8 @@ export function afkKick(room: RoomObject) {
 
 export function updatePlayerActivity(player: PlayerObject) {
   activities[player.id] = Date.now();
-  const playerPropierties = playerList[player.id];
-  if (playerPropierties) {
-    playerPropierties.afkAlert = false;
+  const playerProperties = playerList[player.id];
+  if (playerProperties) {
+    playerProperties.afkAlert = false;
   }
 }
