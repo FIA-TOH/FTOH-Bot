@@ -82,6 +82,7 @@ const trackNameMapping: { [key: string]: string } = {
   istanbulPublic: "İstanbul Park - By Ximb - Public",
   interlagosPublic: "Autodromo Interlagos - By Ximb - Public",
   argentinaPublic: "Autodromo Oscar Alfredo Galvez - By Ximb - Public",
+  bakuSeasonTres: "Baku City Circuit - By Ximb - NewGenV3",
 };
 
 export const bestTimes: { [key: string]: [number, string, string] } = {
@@ -156,6 +157,7 @@ export const bestTimes: { [key: string]: [number, string, string] } = {
   silverstoneSeasonTres: [49.360, "Danny", trackNameMapping["silverstoneSeasonTres"]],
   monzaSeasonTres: [49.000, "Ximb", trackNameMapping["monzaSeasonTres"]],
   spaSeasonTres: [65.405, "Danny", trackNameMapping["spaSeasonTres"]],
+    bakuSeasonTres: [54.400, "Splinter", trackNameMapping["bakuSeasonTres"]],
 
   suzukaPublic: [46.700, "Splinter", trackNameMapping["suzukaPublic"]],
   melbournePublic: [32.330, "Danny", trackNameMapping["melbournePublic"]],

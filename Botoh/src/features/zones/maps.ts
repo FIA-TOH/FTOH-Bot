@@ -104,6 +104,7 @@ import { BARCELONASEASONTRES } from "../../circuits/barcelona/barcelonaSeasonTre
 import { SILVERSTONESEASONTRES } from "../../circuits/silverstone/silverstoneSeasonTres";
 import { MONZASEASONTRES } from "../../circuits/monza/monzaSeasonTres";
 import { SPASEASONTRES } from "../../circuits/spa/spaSeasonTres";
+import { BAKUSEASONTRES } from "../../circuits/baku/bakuSeasonTres";
 
 
 // import {DAYTONA} from "../circuits/daytona/daytona";
@@ -127,6 +128,7 @@ export const CIRCUITS: Circuit[] = LEAGUE_MODE
     SILVERSTONESEASONTRES,
     MONZASEASONTRES,
     SPASEASONTRES,
+    BAKUSEASONTRES,
       IMOLA,
       SUZUKA,
       MELBOURNE,
@@ -235,6 +237,7 @@ export const CIRCUIT_FILE_NAMES: string[] = LEAGUE_MODE
       "silverstoneSeasonTres.hbs",
       "monzaSeasonTres.hbs",
       "spaSeasonTres.hbs",
+      "bakuSeasonTres.hbs",
       "imola.hbs",
       "suzuka.hbs",
       "melbourne.hbs",
