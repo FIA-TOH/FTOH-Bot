@@ -28,6 +28,7 @@ const CRASH_WALL_LOG_COOLDOWN_MS = 5000;
 const CRASH_DAMAGE_PER_SPEED = 0.28125;
 const CURVED_DETECTOR_STEP_DEGREES = 5;
 const CURVED_DETECTOR_EXTRA_RADIUS = 1;
+const CRASH_WALL_DETECTION_RADIUS_REDUCTION = 1;
 
 export let damageMode: DamageMode = false;
 export let damageEnabled = false;
@@ -164,7 +165,7 @@ function getDetectorSegments(detector: CrashWallDetector): Segment[] {
 
 function isTouchingDetector(disc: DiscPropertiesObject, detector: CrashWallDetector) {
   const touchRadius =
-    disc.radius +
+    Math.max(0, disc.radius - CRASH_WALL_DETECTION_RADIUS_REDUCTION) +
     (detector.curvatura !== 0 ? CURVED_DETECTOR_EXTRA_RADIUS : 0);
   const radiusSq = touchRadius * touchRadius;
 
