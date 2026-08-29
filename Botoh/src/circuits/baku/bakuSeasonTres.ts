@@ -104,6 +104,7 @@ CutDetectSegments: [
   { v0: [-1539, -1156], v1: [-1494, -1200], index: 258, penalty: 5 },
   { v0: [-4303, 161], v1: [-4267, 166], index: 260, penalty: 5 },
   { v0: [-3435, 1250], v1: [-3432, 1162], index: 262, penalty: 5 },
+    { v0: [-1416, 39], v1: [-1390, 2], index: 264, penalty: 5 },
 ],
 CrashWallDetector: [
   {
