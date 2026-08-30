@@ -11,6 +11,7 @@ import { Teams } from "../changeGameState/teams";
 import { isPitNewSystemEnabled } from "./newPitSystem/newPitManager";
 import { Tires, tyresActivated } from "./tires";
 import { isPitStopBlockedByVSCForPlayer } from "../safetyCar/vsc";
+import { restorePlayerPersistentAvatar } from "../changePlayerState/handleAvatar";
 
 const PREPARED_TYRE_LABELS: Record<Tires, string> = {
   [Tires.SOFT]: "Soft",
@@ -57,6 +58,7 @@ export function handlePitlane(
       playerList[p.id].pits.pitsNumber += 1;
       playerList[p.id].lastPitlaneLap = playerList[p.id].currentLap;
       playerList[p.id].inPitlane = true;
+      restorePlayerPersistentAvatar(p.id, room);
       applyPlayerCollision(room, p.id);
       const isPitBlockedByVSC = isPitStopBlockedByVSCForPlayer(p.id);
       const preparedTyre = getPreparedPitTire(p.id, p.name);
